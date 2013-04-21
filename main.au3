@@ -60,7 +60,7 @@ While 1
     Switch $Msg
         Case $GUI_EVENT_CLOSE
             ExitLoop
-        Case $ButtonMapTab
+        Case $ButtonSelectMapTab
             SelectMapTab()
         Case 0
             ContinueLoop

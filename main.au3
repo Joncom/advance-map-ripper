@@ -28,6 +28,8 @@
 ;$text = "Window size is " & $pos[2] & " by " & $pos[3]
 ;MsgBox(1, "Window Size:", $text)
 
+EnsureMapWindowFitsMap()
+
 ; Run the program until it is closed.
 While 1
     $Msg = GUIGetMsg()

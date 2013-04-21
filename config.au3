@@ -19,7 +19,7 @@ $tilesize = 16
 
 ; GUI
 
-$GUITitle = "AMRipper" ; Don't use word "Advance" because confuses title searching.
+$GUITitle = "AM Ripper" ; Don't use word "Advance" because confuses title searching.
 $GUIWidth = 300
 $GUIHeight = 300
 

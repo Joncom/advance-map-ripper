@@ -1,6 +1,5 @@
 $windowTitle = "Advance Map - PALLET TOWN"
 ;$text = ControlCommand ( $windowTitle, "", 50017416, "CurrentTab", "" )
-;MsgBox ( 1, "Text", $text )
 
 ;ClickMapTab()
 ;ClickHeaderTab()
@@ -56,3 +55,4 @@ EndFunc
 
 
 
+MsgBox ( 1, "Text", GetMapHeight() )

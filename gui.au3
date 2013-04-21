@@ -4,6 +4,7 @@
 GUICreate( $GUITitle, $GUIWidth, $GUIHeight )
 GUISetState(@SW_SHOW)
 
+; SELECTING TABS
 $ButtonSelectMapTab = GUICtrlCreateButton ( "Select Map Tab", 5, 5 )
 $ButtonSelectMovementTab = GUICtrlCreateButton ( "Select Movement Tab", 5, 35 )
 $ButtonSelectEventsTab = GUICtrlCreateButton ( "Select Events Tab", 5, 65 )

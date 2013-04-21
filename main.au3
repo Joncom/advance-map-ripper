@@ -54,6 +54,7 @@ EndFunc
 ;$text = ControlCommand ( $windowTitle, "", 50017416, "CurrentTab", "" )
 ;MsgBox ( 1, "Text", GetMapHeight() )
 
+; Run the program until it is closed.
 While 1
     $Msg = GUIGetMsg()
     Switch $Msg

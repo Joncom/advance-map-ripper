@@ -20,6 +20,9 @@
 ;MouseMove( $windowPos[0] + 10, $windowPos[1] + 10, 0 )
 ;MouseWheel ( "down" )
 
+; Example of how to resize a non-resizable window.
+WinMove( $BlockEditorWindowTitle, "", 0, 0, 800, 800 )
+
 ; Run the program until it is closed.
 While 1
     $Msg = GUIGetMsg()

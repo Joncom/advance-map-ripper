@@ -61,6 +61,19 @@ Func MoveMouseToMapTile($x, $y)
 EndFunc
 
 
+Func GetBlockFromStatusbar()
+    ; Get status text as string.
+    $status = StatusbarGetText($windowTitle)
+    ; Break up string into pieces.
+    $pieces = StringSplit( $status, "$" )
+    ; Count how many pieces in the array.
+    $count = UBound( $pieces )
+    ; The last piece should be the block.
+    $block = $pieces[$count-1]
+    Return $block
+EndFunc
+
+
 
 Func GetMapWidth()
     $width = ControlGetText ( $windowTitle, "", $MapWidthID )

@@ -1,4 +1,4 @@
-#include <include-config.au3>
+#include <config.au3>
 
 Func ClickMapTab()
    SelectTab($MainTabID, $MapTab)

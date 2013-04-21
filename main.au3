@@ -58,9 +58,11 @@ EndFunc
 While 1
     $Msg = GUIGetMsg()
     Switch $Msg
-        Case 0
-            ContinueLoop
         Case $GUI_EVENT_CLOSE
             ExitLoop
+        Case $ButtonMapTab
+            ClickMapTab()
+        Case 0
+            ContinueLoop
     EndSwitch
 WEnd

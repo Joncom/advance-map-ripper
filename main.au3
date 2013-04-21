@@ -13,7 +13,7 @@ $EventsTab = 3 ; not yet used
 $WildPokemonTab = 4 ; not yet used
 $HeaderTab = 5
 
-; IDs for access data.
+; IDs for accessing data.
 $MainTabID = "[CLASS:SysTabControl32; INSTANCE:1]"
 $MapNameID = "[CLASSNN:Edit39]"
 $MapWidthID = "[CLASSNN:Edit22]"

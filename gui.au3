@@ -14,4 +14,4 @@ $ButtonSelectHeaderTab = GUICtrlCreateButton ( "Select Header Tab", 5, 125 )
 ; MOVING MOUSE TO TILE
 $InputTileX = GUICtrlCreateInput ( "0", 5, 155, 20 )
 $InputTileY = GUICtrlCreateInput ( "0", 30, 155, 20 )
-$ButtonMoveMouseToTile = GUICtrlCreateButton ( "Move Mouse To Tile", 55, 155 )
+$ButtonMoveMouseToMapTile = GUICtrlCreateButton ( "Move Mouse To Map Tile", 55, 155 )

@@ -42,7 +42,7 @@ EndFunc
 
 
 
-Func MoveMouseToTile($x, $y)
+Func MoveMouseToMapTile($x, $y)
     ; Convert tile position to pixels.
     $pixelX = Int($x) * $tilesize
     $pixelY = Int($y) * $tilesize

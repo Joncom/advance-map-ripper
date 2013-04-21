@@ -7,7 +7,7 @@
 ; Mouse movement coordinates are relative to the active window.
 AutoItSetOption ( "MouseCoordMode", 2 ) ;1=absolute, 0=relative, 2=client
 ; How long to wait between window-related actions like MouseMove.
-AutoItSetOption ( "WinWaitDelay", 10 ) ; Default 250 ms
+AutoItSetOption ( "WinWaitDelay", 5 ) ; Default 250 ms
 
 
 

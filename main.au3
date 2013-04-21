@@ -3,24 +3,24 @@ $windowTitle = "Advance Map - PALLET TOWN"
 ;MsgBox ( 1, "Text", $text )
 
 ;ClickMapTab()
-;ClickHeaderTab()
-GetMapWidth()
+ClickHeaderTab()
+;GetMapWidth()
 
 Func ClickMapTab()
-   $controlID = 50017416
+   $controlID = "[CLASS:SysTabControl32; INSTANCE:1]"
    $tab = 1
    SelectTab($controlID, $tab)
 EndFunc
 
 Func ClickHeaderTab()
-   $controlID = 50017416
+   $controlID = "[CLASS:SysTabControl32; INSTANCE:1]"
    $tab = 5
    SelectTab($controlID, $tab)
 EndFunc
 
 Func GetMapWidth()
    ; Assumes that "Header" tab is active.
-   $controlID = 50322704
+   $controlID = "[CLASSNN:Edit22]"
    $text = ControlGetText ( $windowTitle, "", $controlID )
    MsgBox ( 1, "Text", $text )
 EndFunc

@@ -5,7 +5,7 @@
 ;$text = ControlCommand ( $MainWindowTitle, "", 50017416, "CurrentTab", "" )
 ;MsgBox ( 1, "Text", GetMapHeight() )
 
-; Get block data from tiles.
+; Example of getting block data from tiles.
 ;For $y = 0 To 1;GetMapHeight() - 1
 ;    For $x = 0 To 1;GetMapWidth() - 1
 ;        MoveMouseToMapTile($x, $y)

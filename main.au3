@@ -21,6 +21,8 @@ While 1
             SelectWildPokemonTab()
         Case $ButtonSelectHeaderTab
             SelectHeaderTab()
+        Case $ButtonMoveMouseToTile
+            MoveMouseToTile($InputTileX, $InputTileY)
         Case 0
             ContinueLoop
     EndSwitch

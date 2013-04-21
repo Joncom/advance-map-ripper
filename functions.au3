@@ -75,6 +75,13 @@ Func GetBlockFromStatusbar()
     Return $decBlock
 EndFunc
 
+Func ResizeWindow($title, $width, $height)
+    ; Get current position.
+    $pos = WinGetPos( $title )
+    ; Resize window.
+    WinMove( $title, "", $pos[0], $pos[1], $width, $height )
+EndFunc
+
 
 
 Func GetMapWidth()

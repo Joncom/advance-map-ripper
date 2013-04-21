@@ -109,6 +109,24 @@ EndFunc
 
 
 
+Func IncreaseWindowWidth($title, $pixels)
+    ; Get current position/size.
+    $pos = WinGetPos( $title )
+    ; Resize window.
+    WinMove( $title, "", $pos[0], $pos[1], $pos[2] + $pixels, $pos[3] )
+EndFunc
+
+
+
+Func IncreaseWindowHeight($title, $pixels)
+    ; Get current position/size.
+    $pos = WinGetPos( $title )
+    ; Resize window.
+    WinMove( $title, "", $pos[0], $pos[1], $pos[2], $pos[3] + $pixels )
+EndFunc
+
+
+
 Func GetMapWidth()
     $width = ControlGetText ( $MainWindowTitle, "", $MapWidthID )
     Return $width

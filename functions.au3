@@ -92,9 +92,15 @@ Func EnsureMapWindowFitsMap()
     $size = ControlGetPos ( $MainWindowTitle, "", $MapWindowID )
     $winWidth = $size[2]
     $winHeight = $size[3]
-    ; Check if resize is needed.
-    If $winWidth < $pixelWidth OR $winHeight < $pixelHeight Then
-    ;
+    ; Increase window width if needed.
+    If $winWidth < $pixelWidth Then
+        $diff = $pixelWidth - $winWidth
+        IncreaseWindowWidth( $MainWindowTitle, $diff )
+    EndIf
+    ; Increase window weight if needed.
+    If $winHeight < $pixelHeight Then
+        $diff = $pixelHeight - $winHeight
+        IncreaseWindowHeight( $MainWindowTitle, $diff )
     EndIf
 EndFunc
 

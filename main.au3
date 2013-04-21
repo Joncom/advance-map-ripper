@@ -52,4 +52,14 @@ EndFunc
 
 
 ;$text = ControlCommand ( $windowTitle, "", 50017416, "CurrentTab", "" )
-MsgBox ( 1, "Text", GetMapHeight() )
+;MsgBox ( 1, "Text", GetMapHeight() )
+
+While 1
+    $Msg = GUIGetMsg()
+    Switch $Msg
+        Case 0
+            ContinueLoop
+        Case $GUI_EVENT_CLOSE
+            ExitLoop
+    EndSwitch
+WEnd

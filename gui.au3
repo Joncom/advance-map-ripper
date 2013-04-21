@@ -1,3 +1,4 @@
+#include <GUIConstantsEx.au3>
 #include <config.au3>
 
 GUICreate( $GUITitle, $GUIWidth, $GUIHeight )

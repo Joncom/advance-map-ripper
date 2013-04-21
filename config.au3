@@ -1,8 +1,6 @@
 #include-once
 
-; When moving mouse, use relative coords to the client
-; area of the active window. !IMPORTANT!
-AutoItSetOption ( "MouseCoordMode", 2 )
+AutoItSetOption ( "MouseCoordMode", 2 ) ;1=absolute, 0=relative, 2=client
 
 $windowTitle = "Advance Map - PALLET TOWN"
 

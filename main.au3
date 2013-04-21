@@ -2,7 +2,7 @@
 #include <functions.au3>
 #include <gui.au3>
 
-;$text = ControlCommand ( $windowTitle, "", 50017416, "CurrentTab", "" )
+;$text = ControlCommand ( $MainWindowTitle, "", 50017416, "CurrentTab", "" )
 ;MsgBox ( 1, "Text", GetMapHeight() )
 
 For $y = 0 To 1;GetMapHeight() - 1

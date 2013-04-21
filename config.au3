@@ -5,7 +5,7 @@ AutoItSetOption ( "MouseCoordMode", 2 ) ;1=absolute, 0=relative, 2=client
 ; How long to wait between window-related actions like MouseMove.
 AutoItSetOption ( "WinWaitDelay", 10 ) ; Default 250 ms
 
-$windowTitle = "Advance"
+$MainWindowTitle = "Advance"
 $BlockEditorWindowTitle = "Block editor"
 
 $tilesize = 16

@@ -25,17 +25,17 @@ EndFunc
 
 Func SelectTab($controlID, $tab)
     ; Get the current tab.
-    $currentTab = ControlCommand ( $windowTitle, "", $controlID, "CurrentTab", "" )
+    $currentTab = ControlCommand ( $MainWindowTitle, "", $controlID, "CurrentTab", "" )
     While $currentTab <> $tab
         If $currentTab < $tab Then
             ; Shift tab to right.
-            ControlCommand ( $windowTitle, "", $controlID, "TabRight", "" )
+            ControlCommand ( $MainWindowTitle, "", $controlID, "TabRight", "" )
         Else
             ; Shift tab to left.
-            ControlCommand ( $windowTitle, "", $controlID, "TabLeft", "" )
+            ControlCommand ( $MainWindowTitle, "", $controlID, "TabLeft", "" )
         EndIf
         ; Set new current tab.
-        $currentTab = ControlCommand ( $windowTitle, "", $controlID, "CurrentTab", "" )
+        $currentTab = ControlCommand ( $MainWindowTitle, "", $controlID, "CurrentTab", "" )
     WEnd
 EndFunc
 
@@ -50,12 +50,12 @@ Func MoveMouseToMapTile($x, $y)
     $pixelX = $pixelX + ($tilesize / 2)
     $pixelY = $pixelY + ($tilesize / 2)
     ; Get position of map window.
-    $mapWindowPos = ControlGetPos ( $windowTitle, "", $MapWindowID )
+    $mapWindowPos = ControlGetPos ( $MainWindowTitle, "", $MapWindowID )
     ; Calculate final position.
     $mouseX = $mapWindowPos[0] + $pixelX
     $mouseY = $mapWindowPos[1] + $pixelY
     ; Window must be active for MouseMove relative coord to work.
-    WinActivate ( $windowTitle )
+    WinActivate ( $MainWindowTitle )
     ; Move mouse to tile position.
     MouseMove($mouseX, $mouseY, 0)
 EndFunc
@@ -63,7 +63,7 @@ EndFunc
 
 Func GetBlockFromStatusbar()
     ; Get status text as string.
-    $status = StatusbarGetText($windowTitle)
+    $status = StatusbarGetText($MainWindowTitle)
     ; Break up string into pieces.
     $pieces = StringSplit( $status, "$" )
     ; Count how many pieces in the array.
@@ -78,11 +78,11 @@ EndFunc
 
 
 Func GetMapWidth()
-    $width = ControlGetText ( $windowTitle, "", $MapWidthID )
+    $width = ControlGetText ( $MainWindowTitle, "", $MapWidthID )
     Return $width
 EndFunc
 
 Func GetMapHeight()
-    $height = ControlGetText ( $windowTitle, "", $MapHeightID )
+    $height = ControlGetText ( $MainWindowTitle, "", $MapHeightID )
     Return $height
 EndFunc

@@ -62,6 +62,14 @@ While 1
             ExitLoop
         Case $ButtonSelectMapTab
             SelectMapTab()
+        Case $ButtonSelectMovementTab
+            SelectMovementTab()
+        Case $ButtonSelectEventsTab
+            SelectEventsTab()
+        Case $ButtonSelectWildPokemonTab
+            SelectWildPokemonTab()
+        Case $ButtonSelectHeaderTab
+            SelectHeaderTab()
         Case 0
             ContinueLoop
     EndSwitch

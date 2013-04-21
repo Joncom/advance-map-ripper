@@ -21,7 +21,7 @@
 ;MouseWheel ( "down" )
 
 ; Example of how to resize a non-resizable window.
-ResizeWindow($BlockEditorWindowTitle, 800, 800)
+;ResizeWindow($BlockEditorWindowTitle, 800, 800)
 
 ; Run the program until it is closed.
 While 1

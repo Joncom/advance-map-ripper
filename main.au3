@@ -5,8 +5,8 @@
 ;$text = ControlCommand ( $windowTitle, "", 50017416, "CurrentTab", "" )
 ;MsgBox ( 1, "Text", GetMapHeight() )
 
-For $x = 0 To GetMapWidth()
-    For $y = 0 To GetMapHeight()
+For $y = 0 To 2;GetMapHeight() - 1
+    For $x = 0 To 2;GetMapWidth() - 1
         MoveMouseToMapTile($x, $y)
     Next
 Next

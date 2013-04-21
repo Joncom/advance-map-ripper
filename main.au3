@@ -15,7 +15,7 @@ Func ClickEventsTab()
    SelectTab($MainTabID, $EventsTab)
 EndFunc
 
-Func ClickEventsTab()
+Func ClickWildPokemonTab()
    SelectTab($MainTabID, $WildPokemonTab)
 EndFunc
 

@@ -43,7 +43,15 @@ EndFunc
 
 
 Func MoveMouseToTile($x, $y)
-    Return 0
+    ; Convert tile to pixels.
+    $pixelX = $x * $tilesize
+    $pixelY = $y * $tilesize
+    ; Get position of map window.
+    $mapWindowPos = ControlGetPos ( $windowTitle, "", $MapWindowID )
+    $mouseX = $mapWindowPos[0] + $pixelX
+    $mouseY = $mapWindowPos[1] + $pixelY
+    ; Move mouse to tile position.
+    MouseClick("left", $mouseX, $mouseY, 0) ; 0 clicks
 EndFunc
 
 

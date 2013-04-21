@@ -23,6 +23,11 @@
 ; Example of how to resize a non-resizable window.
 ;ResizeWindow($BlockEditorWindowTitle, 800, 800)
 
+; Example of getting size of a control window.
+$pos = ControlGetPos ( $MainWindowTitle, "", $MapWindowID )
+$text = "Window size is " & $pos[2] & " by " & $pos[3]
+MsgBox(1, "Window Size:", $text)
+
 ; Run the program until it is closed.
 While 1
     $Msg = GUIGetMsg()

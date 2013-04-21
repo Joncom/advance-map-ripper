@@ -22,7 +22,7 @@ While 1
         Case $ButtonSelectHeaderTab
             SelectHeaderTab()
         Case $ButtonMoveMouseToTile
-            MoveMouseToTile($InputTileX, $InputTileY)
+            MoveMouseToTile(GUICtrlRead($InputTileX), GUICtrlRead($InputTileY))
         Case 0
             ContinueLoop
     EndSwitch

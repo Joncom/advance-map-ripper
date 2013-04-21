@@ -1,7 +1,7 @@
 #include <config.au3>
 #include <gui.au3>
 
-; SELECING TABS
+; SELECTING TABS
 
 Func SelectMapTab()
    SelectTab($MainTabID, $MapTab)
@@ -23,6 +23,22 @@ Func SelectHeaderTab()
    SelectTab($MainTabID, $HeaderTab)
 EndFunc
 
+Func SelectTab($controlID, $tab)
+   ; Get the current tab.
+   $currentTab = ControlCommand ( $windowTitle, "", $controlID, "CurrentTab", "" )
+   While $currentTab <> $tab
+     If $currentTab < $tab Then
+       ; Shift tab to right.
+       ControlCommand ( $windowTitle, "", $controlID, "TabRight", "" )
+     Else
+       ; Shift tab to left.
+       ControlCommand ( $windowTitle, "", $controlID, "TabLeft", "" )
+     EndIf
+     ; Set new current tab.
+     $currentTab = ControlCommand ( $windowTitle, "", $controlID, "CurrentTab", "" )
+   WEnd
+EndFunc
+
 ; Assumes that "Header" tab is active.
 Func GetMapWidth()
    $width = ControlGetText ( $windowTitle, "", $MapWidthID )
@@ -32,22 +48,6 @@ EndFunc
 Func GetMapHeight()
    $height = ControlGetText ( $windowTitle, "", $MapHeightID )
    Return $height
-EndFunc
-
-Func SelectTab($controlID, $tab)
-   ; Get the current tab.
-   $currentTab = ControlCommand ( $windowTitle, "", $controlID, "CurrentTab", "" )
-   While $currentTab <> $tab
-	  If $currentTab < $tab Then
-		 ; Shift tab to right.
-		 ControlCommand ( $windowTitle, "", $controlID, "TabRight", "" )
-	  Else
-		 ; Shift tab to left.
-		 ControlCommand ( $windowTitle, "", $controlID, "TabLeft", "" )
-	  EndIf
-	  ; Set new current tab.
-	  $currentTab = ControlCommand ( $windowTitle, "", $controlID, "CurrentTab", "" )
-   WEnd
 EndFunc
 
 

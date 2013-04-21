@@ -1,7 +1,21 @@
 #include <config.au3>
 
+; CLICKING ON TABS
+
 Func ClickMapTab()
    SelectTab($MainTabID, $MapTab)
+EndFunc
+
+Func ClickMovementTab()
+   SelectTab($MainTabID, $MovementTab)
+EndFunc
+
+Func ClickEventsTab()
+   SelectTab($MainTabID, $EventsTab)
+EndFunc
+
+Func ClickEventsTab()
+   SelectTab($MainTabID, $WildPokemonTab)
 EndFunc
 
 Func ClickHeaderTab()

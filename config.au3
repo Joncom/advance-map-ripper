@@ -8,7 +8,7 @@ $WildPokemonTab = 4 ; not yet used
 $HeaderTab = 5
 
 ; IDs for accessing data.
-$MainTabID = "[CLASS:SysTabControl32; INSTANCE:1]"
+$MainTabID = "[CLASSNN:SysTabControl321]"
 $MapWindowID = "[CLASSNN:Window10]"
 $MapNameID = "[CLASSNN:Edit39]"
 $MapWidthID = "[CLASSNN:Edit22]"

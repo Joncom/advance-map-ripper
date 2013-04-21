@@ -8,8 +8,6 @@
 For $y = 0 To 1;GetMapHeight() - 1
     For $x = 0 To 1;GetMapWidth() - 1
         MoveMouseToMapTile($x, $y)
-        ; Displays the block in status bar.
-        MouseClick("right")
         $block = GetBlockFromStatusbar()
         MsgBox(1, "Block Hex:", $block)
     Next

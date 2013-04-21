@@ -1,3 +1,5 @@
+#include-once
+
 $windowTitle = "Advance Map - PALLET TOWN"
 
 ; Tab #'s for navigating tabs.

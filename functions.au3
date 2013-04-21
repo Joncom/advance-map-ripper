@@ -41,6 +41,13 @@ EndFunc
 
 
 
+
+Func MoveMouseToTile($x, $y)
+  Return 0
+EndFunc
+
+
+
 Func GetMapWidth()
    $width = ControlGetText ( $windowTitle, "", $MapWidthID )
    Return $width

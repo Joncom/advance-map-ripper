@@ -4,4 +4,4 @@
 GUICreate( $GUITitle, $GUIWidth, $GUIHeight )
 GUISetState(@SW_SHOW)
 
-$ButtonMapTab = GUICtrlCreateButton ( "Select Map Tab", 5, 5 )
+$ButtonSelectMapTab = GUICtrlCreateButton ( "Select Map Tab", 5, 5 )

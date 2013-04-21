@@ -1,25 +1,25 @@
 #include <config.au3>
 #include <gui.au3>
 
-; CLICKING ON TABS
+; SELECING TABS
 
-Func ClickMapTab()
+Func SelectMapTab()
    SelectTab($MainTabID, $MapTab)
 EndFunc
 
-Func ClickMovementTab()
+Func SelectMovementTab()
    SelectTab($MainTabID, $MovementTab)
 EndFunc
 
-Func ClickEventsTab()
+Func SelectEventsTab()
    SelectTab($MainTabID, $EventsTab)
 EndFunc
 
-Func ClickWildPokemonTab()
+Func SelectWildPokemonTab()
    SelectTab($MainTabID, $WildPokemonTab)
 EndFunc
 
-Func ClickHeaderTab()
+Func SelectHeaderTab()
    SelectTab($MainTabID, $HeaderTab)
 EndFunc
 
@@ -61,7 +61,7 @@ While 1
         Case $GUI_EVENT_CLOSE
             ExitLoop
         Case $ButtonMapTab
-            ClickMapTab()
+            SelectMapTab()
         Case 0
             ContinueLoop
     EndSwitch

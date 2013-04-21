@@ -61,6 +61,7 @@ Func MoveMouseToMapTile($x, $y)
 EndFunc
 
 
+
 Func GetBlockFromStatusbar()
     ; Get status text as string.
     $status = StatusbarGetText($MainWindowTitle)
@@ -75,6 +76,30 @@ Func GetBlockFromStatusbar()
     Return $decBlock
 EndFunc
 
+
+
+Func EnsureMapWindowFitsMap()
+    ; Get map dimensions.
+    $mapWidth = Int(GetMapWidth())
+    $mapHeight = Int(GetMapWidth())
+    ; Convert map dimension to pixels.
+    $pixelWidth = $mapWidth * $tilesize
+    $pixelHeight = $mapHeight * $tilesize
+    ; Add an extra tile to be safe.
+    $pixelWidth = $pixelWidth + $tilesize
+    $pixelHeight = $pixelHeight + $tilesize
+    ; Get size of map window.
+    $size = ControlGetPos ( $MainWindowTitle, "", $MapWindowID )
+    $winWidth = $size[2]
+    $winHeight = $size[3]
+    ; Check if resize is needed.
+    If $winWidth < $pixelWidth OR $winHeight < $pixelHeight Then
+    ;
+    EndIf
+EndFunc
+
+
+
 Func ResizeWindow($title, $width, $height)
     ; Get current position.
     $pos = WinGetPos( $title )
@@ -88,6 +113,8 @@ Func GetMapWidth()
     $width = ControlGetText ( $MainWindowTitle, "", $MapWidthID )
     Return $width
 EndFunc
+
+
 
 Func GetMapHeight()
     $height = ControlGetText ( $MainWindowTitle, "", $MapHeightID )

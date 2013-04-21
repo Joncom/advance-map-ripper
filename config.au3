@@ -2,6 +2,10 @@
 
 $windowTitle = "Advance Map - PALLET TOWN"
 
+$GUITitle = "Advance Map Ripper"
+$GUIWidth = 300
+$GUIHeight = 300
+
 ; Tab #'s for navigating tabs.
 $MapTab = 1
 $MovementTab = 2 ; not yet used

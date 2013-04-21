@@ -1,3 +1,3 @@
 #include <config.au3>
 
-GUICreate("test",300,300)
+GUICreate( $GUITitle, $GUIWidth, $GUIHeight )

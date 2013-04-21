@@ -1,4 +1,5 @@
 #include <config.au3>
+#include <gui.au3>
 
 ; CLICKING ON TABS
 

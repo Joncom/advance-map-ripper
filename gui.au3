@@ -1,0 +1,1 @@
+GUICreate("test",300,300)

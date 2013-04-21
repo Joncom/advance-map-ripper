@@ -29,6 +29,8 @@ $GUIHeight = 300
 
 $MainWindowTitle = "Advance" ; First part of title.
 $MainTabID = "[CLASSNN:SysTabControl321]"
+$MainMapBankID = "[CLASSNN:Edit19]"
+$MainMapNoID = "[CLASSNN:Edit17]"
 $MapWindowID = "[CLASSNN:Window10]"
 $MapNameID = "[CLASSNN:Edit39]"
 $MapWidthID = "[CLASSNN:Edit22]"

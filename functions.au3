@@ -46,13 +46,16 @@ Func MoveMouseToTile($x, $y)
     ; Convert tile position to pixels.
     $pixelX = Int($x) * $tilesize
     $pixelY = Int($y) * $tilesize
-    ; Get position of root window.
-    $windowPos = WinGetPos( $windowTitle, "" )
+    ; Use the center of tile.
+    $pixelX = $pixelX + ($tilesize / 2)
+    $pixelY = $pixelY + ($tilesize / 2)
     ; Get position of map window.
     $mapWindowPos = ControlGetPos ( $windowTitle, "", $MapWindowID )
     ; Calculate final position.
-    $mouseX = $windowPos[0] + $mapWindowPos[0] + $pixelX
-    $mouseY = $windowPos[1] + $mapWindowPos[1] + $pixelY
+    $mouseX = $mapWindowPos[0] + $pixelX
+    $mouseY = $mapWindowPos[1] + $pixelY
+    ; Make sure that the correct window is active.
+    WinActivate ( $windowTitle )
     ; Move mouse to tile position.
     MouseMove($mouseX, $mouseY)
 EndFunc

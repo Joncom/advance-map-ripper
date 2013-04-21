@@ -33,6 +33,11 @@ Func GetMapWidth()
    Return $width
 EndFunc
 
+Func GetMapHeight()
+   $height = ControlGetText ( $windowTitle, "", $MapHeightID )
+   Return $height
+EndFunc
+
 Func SelectTab($controlID, $tab)
    ; Get the current tab.
    $currentTab = ControlCommand ( $windowTitle, "", $controlID, "CurrentTab", "" )

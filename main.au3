@@ -14,6 +14,11 @@
 ;    Next
 ;Next
 
+$windowPos = ControlGetPos ( $MainWindowTitle, "", "[CLASSNN:Window8]")
+WinActivate ( $MainWindowTitle )
+MouseMove( $windowPos[0] + 10, $windowPos[1] + 10, 0 )
+MouseWheel ( "down" )
+
 ; Run the program until it is closed.
 While 1
     $Msg = GUIGetMsg()

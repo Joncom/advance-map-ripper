@@ -19,7 +19,6 @@ $HeaderTab = 5
 
 ; IDs for accessing data.
 $MainTabID = "[CLASSNN:SysTabControl321]"
-$MainStatusBarID = "[CLASSN:msctls_statusbar321]"
 $MapWindowID = "[CLASSNN:Window10]"
 $MapNameID = "[CLASSNN:Edit39]"
 $MapWidthID = "[CLASSNN:Edit22]"

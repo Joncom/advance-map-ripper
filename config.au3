@@ -32,6 +32,15 @@ $MainTabID = "[CLASSNN:SysTabControl321]"
 $MainMapBankID = "[CLASSNN:Edit19]"
 $MainMapNoID = "[CLASSNN:Edit17]"
 $MapWindowID = "[CLASSNN:Window10]"
+
+; This size values are important because it makes the window small enough so
+; that scrollbars exist for all maps. And it lets the program know how many
+; tiles are viewable so that it knows when it needs to scroll the map.
+$MainMapWindowWidth = 133
+$MainMapWindowHeight = 165
+$MainMapWindowTileWidth = 7
+$MainMapWindowTileHeight = 9
+
 $MapNameID = "[CLASSNN:Edit39]"
 $MapWidthID = "[CLASSNN:Edit22]"
 $MapHeightID = "[CLASSNN:Edit21]"

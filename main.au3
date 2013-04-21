@@ -5,6 +5,12 @@
 ;$text = ControlCommand ( $windowTitle, "", 50017416, "CurrentTab", "" )
 ;MsgBox ( 1, "Text", GetMapHeight() )
 
+For $x = 0 To GetMapWidth()
+    For $y = 0 To GetMapHeight()
+        MoveMouseToMapTile($x, $y)
+    Next
+Next
+
 ; Run the program until it is closed.
 While 1
     $Msg = GUIGetMsg()

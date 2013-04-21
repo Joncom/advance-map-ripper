@@ -3,6 +3,7 @@
 AutoItSetOption ( "MouseCoordMode", 2 ) ;1=absolute, 0=relative, 2=client
 
 $windowTitle = "Advance Map - PALLET TOWN"
+$BlockEditorWindowTitle = "Block editor"
 
 $tilesize = 16
 

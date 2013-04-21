@@ -5,12 +5,12 @@ AutoItSetOption ( "MouseCoordMode", 2 ) ;1=absolute, 0=relative, 2=client
 ; How long to wait between window-related actions like MouseMove.
 AutoItSetOption ( "WinWaitDelay", 10 ) ; Default 250 ms
 
-$windowTitle = "Advance Map - PALLET TOWN"
+$windowTitle = "Advance"
 $BlockEditorWindowTitle = "Block editor"
 
 $tilesize = 16
 
-$GUITitle = "Advance Map Ripper"
+$GUITitle = "AMRipper" ; Don't use word "Advance" because confuses title searching.
 $GUIWidth = 300
 $GUIHeight = 300
 

@@ -2,6 +2,8 @@
 
 $windowTitle = "Advance Map - PALLET TOWN"
 
+$tilesize = 16
+
 $GUITitle = "Advance Map Ripper"
 $GUIWidth = 300
 $GUIHeight = 300

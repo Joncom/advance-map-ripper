@@ -23,3 +23,5 @@ $MapWindowID = "[CLASSNN:Window10]"
 $MapNameID = "[CLASSNN:Edit39]"
 $MapWidthID = "[CLASSNN:Edit22]"
 $MapHeightID = "[CLASSNN:Edit21]"
+
+$BlockEditorBlocksID = "[CLASSNN:Window6]"

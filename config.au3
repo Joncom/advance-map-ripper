@@ -9,6 +9,7 @@ $HeaderTab = 5
 
 ; IDs for accessing data.
 $MainTabID = "[CLASS:SysTabControl32; INSTANCE:1]"
+$MapWindowID = "[CLASSNN:Window10]"
 $MapNameID = "[CLASSNN:Edit39]"
 $MapWidthID = "[CLASSNN:Edit22]"
 $MapHeightID = "[CLASSNN:Edit21]"

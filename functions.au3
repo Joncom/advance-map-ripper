@@ -51,7 +51,7 @@ Func MoveMouseToTile($x, $y)
     $mouseX = $mapWindowPos[0] + $pixelX
     $mouseY = $mapWindowPos[1] + $pixelY
     ; Move mouse to tile position.
-    MouseClick("left", $mouseX, $mouseY, 0) ; 0 clicks
+    MouseMove($mouseX, $mouseY)
 EndFunc
 
 

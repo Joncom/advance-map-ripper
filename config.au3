@@ -19,7 +19,6 @@ $MouseMoveSpeed = 0 ; In miliseconds. 0 = instant
 ; TITLES
 
 $MainWindowTitle = "Advance" ; First part of title.
-$BlockEditorWindowTitle = "Block editor"
 $GUITitle = "AM Ripper" ; Don't use word "Advance" because confuses title searching.
 
 
@@ -33,7 +32,6 @@ $MapWidthID = "[CLASSNN:Edit22]"
 $MapHeightID = "[CLASSNN:Edit21]"
 $MapBankID = "[CLASSNN:Edit19]"
 $MapNoID = "[CLASSNN:Edit17]"
-$BlockEditorBlocksID = "[CLASSNN:Window6]"
 
 
 

@@ -1,8 +1,8 @@
 #include <config.au3>
 #include <functions.au3>
-#include <function-tab-select.au3>
+#include <tab-selection.au3> ; Functions for changing which tab is selected.
 #include <function-control-read.au3>
-#include <window-resizing.au3> ; functions used for resizing windows
+#include <window-resizing.au3> ; Functions for resizing windows.
 #include <gui.au3>
 
 ;$text = ControlCommand ( $MainWindowTitle, "", 50017416, "CurrentTab", "" )

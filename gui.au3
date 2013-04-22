@@ -43,4 +43,4 @@ GUISetState(@SW_SHOW)
 
 
 ; Use title as per the config.
-WinSetTitle($Form1, "", $GUITitle)
+WinSetTitle($MainForm, "", $GUITitle)

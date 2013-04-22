@@ -29,20 +29,20 @@ $GUIHeight = 300
 
 $MainWindowTitle = "Advance" ; First part of title.
 $MainTabID = "[CLASSNN:SysTabControl321]"
-$MainMapBankID = "[CLASSNN:Edit19]"
-$MainMapNoID = "[CLASSNN:Edit17]"
-$MainMapWindowID = "[CLASSNN:Window10]"
+$MapBankID = "[CLASSNN:Edit19]"
+$MapNoID = "[CLASSNN:Edit17]"
+$MapWindowID = "[CLASSNN:Window10]"
 
 ; These size values are important because they make the window small enough
 ; that scrollbars exist for all maps. And it lets the program know how many
 ; tiles are viewable so that it knows if it needs to scroll or not.
-$MainMapWindowWidth = 133
-$MainMapWindowHeight = 165
-$MainMapWindowTileWidth = 7
-$MainMapWindowTileHeight = 9
+$MapWindowWidth = 133
+$MapWindowHeight = 165
+$MapWindowTileWidth = 7
+$MapWindowTileHeight = 9
 
 ; Number of pixels a single mousewheel action scrolls the map.
-$MainMapWindowScrollPx = 8
+$MapWindowScrollPx = 8
 
 $MapNameID = "[CLASSNN:Edit39]"
 $MapWidthID = "[CLASSNN:Edit22]"

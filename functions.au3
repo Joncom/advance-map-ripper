@@ -50,7 +50,7 @@ Func MoveMouseToMapTile($x, $y)
     $pixelX = $pixelX + ($tilesize / 2)
     $pixelY = $pixelY + ($tilesize / 2)
     ; Get position of map window.
-    $mapWindowPos = ControlGetPos ( $MainWindowTitle, "", $MainMapWindowID )
+    $mapWindowPos = ControlGetPos ( $MainWindowTitle, "", $MapWindowID )
     ; Calculate final position.
     $mouseX = $mapWindowPos[0] + $pixelX
     $mouseY = $mapWindowPos[1] + $pixelY
@@ -80,7 +80,7 @@ EndFunc
 
 Func ResizeMapWindow($width, $height)
     ; Get the current size of the map window.
-    $size = ControlGetPos ( $MainWindowTitle, "", $MainMapWindowID )
+    $size = ControlGetPos ( $MainWindowTitle, "", $MapWindowID )
     $currWidth = $size[2]
     $currHeight = $size[3]
     ; Adjust window width if needed.

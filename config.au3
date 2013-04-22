@@ -31,13 +31,21 @@ $MainWindowTitle = "Advance" ; First part of title.
 $MainTabID = "[CLASSNN:SysTabControl321]"
 $MapWindowID = "[CLASSNN:Window10]"
 
-; These size values are important because they make the window small enough
-; that scrollbars exist for all maps. And it lets the program know how many
-; tiles are viewable so that it knows if it needs to scroll or not.
+; Make the window small enough to force vertical & horizontal scrollbars.
 $MapWindowWidth = 133
 $MapWindowHeight = 165
+; Precisely how many tiles are viewable in map window?
 $MapWindowTileWidth = 7
 $MapWindowTileHeight = 9
+; Positions of arrows to click on to scroll the map.
+$MapScrollUpX = 123
+$MapScrollUpY = 10
+$MapScrollDownX = 123
+$MapScrollDownY = 137
+$MapScrollLeftX = 11
+$MapScrollLeftY = 155
+$MapScrollRightX = 105
+$MapScrollRightY = 154
 
 ; Number of pixels a single mousewheel action scrolls the map.
 $MapWindowScrollPx = 8

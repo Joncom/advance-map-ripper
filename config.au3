@@ -18,7 +18,10 @@ $MouseMoveSpeed = 0 ; In miliseconds. 0 = instant
 
 ; TITLES
 
-$MainWindowTitle = "Advance" ; First part of title.
+; Only use first part of title so that as the title
+; changes with each map, the window is still matched.
+$MainWindowTitle = "Advance"
+
 $GUITitle = "AM Ripper" ; Don't use word "Advance" because confuses title searching.
 
 

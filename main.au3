@@ -36,7 +36,7 @@ $MapScrollX = 0
 $MapScrollY = 0
 
 ; Resize map window to specific size so it can be scrolled accurately.
-ResizeMapWindow($MapWindowWidth, $MapWindowHeight)
+;ResizeMapWindow($MapWindowWidth, $MapWindowHeight)
 
 ; Run the program until it is closed.
 While 1
@@ -72,6 +72,8 @@ While 1
             ScrollMapUp()
         Case $ButtonScrollMapDown
             ScrollMapDown()
+        Case $ButtonResizeMapWindow
+            ResizeMapWindow($MapWindowWidth, $MapWindowHeight)
         Case 0
             ContinueLoop
     EndSwitch

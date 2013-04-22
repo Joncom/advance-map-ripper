@@ -1,7 +1,7 @@
 #include <config.au3>
 #include <functions.au3>
 #include <tab-selection.au3> ; Functions for changing which tab is selected.
-#include <function-control-read.au3>
+#include <data-extraction.au3> ; Getter functions for reading data.
 #include <window-resizing.au3> ; Functions for resizing windows.
 #include <gui.au3>
 

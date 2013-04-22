@@ -31,7 +31,7 @@ $MainWindowTitle = "Advance" ; First part of title.
 $MainTabID = "[CLASSNN:SysTabControl321]"
 $MainMapBankID = "[CLASSNN:Edit19]"
 $MainMapNoID = "[CLASSNN:Edit17]"
-$MapWindowID = "[CLASSNN:Window10]"
+$MainMapWindowID = "[CLASSNN:Window10]"
 
 ; These size values are important because they make the window small enough
 ; that scrollbars exist for all maps. And it lets the program know how many

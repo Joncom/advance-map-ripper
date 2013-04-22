@@ -24,7 +24,7 @@
 ;ResizeWindow($BlockEditorWindowTitle, 800, 800)
 
 ; Example of getting size of a control window.
-;$pos = ControlGetPos ( $MainWindowTitle, "", $MapWindowID )
+;$pos = ControlGetPos ( $MainWindowTitle, "", $MainMapWindowID )
 ;$text = "Window size is " & $pos[2] & " by " & $pos[3]
 ;MsgBox(1, "Window Size:", $text)
 

@@ -55,6 +55,10 @@ While 1
             SelectHeaderTab()
         Case $ButtonMoveMouseToMapTile
             MoveMouseToMapTile(GUICtrlRead($InputTileX), GUICtrlRead($InputTileY))
+        Case $ButtonGetMapWidth
+            MsgBox(1, "Map Width", GetMapWidth())
+        Case $ButtonGetMapHeight
+            MsgBox(1, "Map Height", GetMapHeight())
         Case 0
             ContinueLoop
     EndSwitch

@@ -1,6 +1,7 @@
 #include-once
 #include <config.au3>
 
+
 Func MoveMouseToMapTile($x, $y)
     ; Take into where the map is scrolled to.
     $x = $x - $ScrollOffsetX
@@ -21,3 +22,4 @@ Func MoveMouseToMapTile($x, $y)
     ; Move mouse to tile position.
     MouseMove($mouseX, $mouseY, $MouseMoveSpeed)
 EndFunc
+

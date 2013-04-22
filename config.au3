@@ -60,9 +60,6 @@ $MapScrollRightY = 154
 ; How many clicks to scroll one tile?
 $MapScrollClicksPerTile = 2
 
-; How many pixels does a single scroll action shift the map?
-$MapScrollPx = 8
-
 
 
 ; TABS

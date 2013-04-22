@@ -43,8 +43,7 @@ Func ScrollMapUntilTileIsOnScreen($x, $y)
     Else
         Return ; The tile is visible
     EndIf
-    ; If the function has not returned,
-    ; it means there is more work to do.
+    ; If the function has not returned it means there is more work to do.
     ScrollMapUntilTileIsOnScreen($x, $y)
 EndFunc
 

@@ -7,7 +7,7 @@
 #include <gui.au3>              ; Sets up the graphical user interface.
 
 
-; Used to keep track of where map is currently scrolled to.
+; Used to keep track of position when scrolling.
 $ScrollOffsetX = 0
 $ScrollOffsetY = 0
 

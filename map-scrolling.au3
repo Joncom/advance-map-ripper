@@ -29,25 +29,25 @@ EndFunc
 
 Func ScrollMapLeft()
     $ScrollOffsetX = $ScrollOffsetX - 1
-    ClickMapWindow($MapScrollLeftX, $MapScrollLeftY)
+    ClickMapWindow($ScrollLeftArrowX, $ScrollLeftArrowY)
 EndFunc
 
 
 Func ScrollMapRight()
     $ScrollOffsetX = $ScrollOffsetX + 1
-    ClickMapWindow($MapScrollRightX, $MapScrollRightY)
+    ClickMapWindow($ScrollRightArrowX, $ScrollRightArrowY)
 EndFunc
 
 
 Func ScrollMapUp()
     $ScrollOffsetY = $ScrollOffsetY - 1
-    ClickMapWindow($MapScrollUpX, $MapScrollUpY)
+    ClickMapWindow($ScrollUpArrowX, $ScrollUpArrowY)
 EndFunc
 
 
 Func ScrollMapDown()
     $ScrollOffsetY = $ScrollOffsetY + 1
-    ClickMapWindow($MapScrollDownX, $MapScrollDownY)
+    ClickMapWindow($ScrollDownArrowX, $ScrollDownArrowY)
 EndFunc
 
 ; Used by scroll functions to click on scrollbar arrows.

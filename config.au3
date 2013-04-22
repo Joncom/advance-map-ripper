@@ -47,14 +47,14 @@ $MapWindowTileWidth = 7
 $MapWindowTileHeight = 9
 
 ; Positions of arrows to click on to scroll the map.
-$MapScrollUpX = 123
-$MapScrollUpY = 10
-$MapScrollDownX = 123
-$MapScrollDownY = 137
-$MapScrollLeftX = 11
-$MapScrollLeftY = 155
-$MapScrollRightX = 105
-$MapScrollRightY = 154
+$ScrollUpArrowX = 123
+$ScrollUpArrowY = 10
+$ScrollDownArrowX = 123
+$ScrollDownArrowY = 137
+$ScrollLeftArrowX = 11
+$ScrollLeftArrowY = 155
+$ScrollRightArrowX = 105
+$ScrollRightArrowY = 154
 
 ; How many clicks to scroll one tile?
 $ScrollClicksPerTile = 2

@@ -36,3 +36,8 @@ $ButtonResizeMapWindow = GUICtrlCreateButton("Resize", 256, 168, 105, 25)
 GUICtrlCreateGroup("", -99, -99, 1, 1)
 GUISetState(@SW_SHOW)
 #EndRegion ### END Koda GUI section ###
+
+
+
+; Use title as per the config.
+WinSetTitle($Form1, "", $GUITitle)

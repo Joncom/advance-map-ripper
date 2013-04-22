@@ -9,6 +9,34 @@
 $MapScrollX = 0
 $MapScrollY = 0
 
+; Used to keep track of which block is at which tile.
+Dim $MapBlocks[ GetMapWidth() ][ GetMapHeight() ]
+
+; Resize map in preperation for reading tiles.
+;ResizeMapWindow($MapWindowWidth, $MapWindowHeight)
+
+; Get block for each tile in map.
+;$text = ""
+;For $y = 0 To GetMapHeight() - 1
+;    For $x = 0 To GetMapWidth() - 1
+;        ; Make sure tile is on screen.
+;        ScrollMapUntilTileIsOnScreen($x, $y)
+;        ; Move mouse to current tile.
+;        MoveMouseToMapTile($x, $y)
+;        ; Get current block.
+;        $block = GetBlockFromStatusbar()
+;        ; Store block.
+;        $MapBlocks[$x][$y] = $block
+;        ; Used for reporting.
+;        $text = $text & $block & " "
+;    Next
+    ;$text = "\n"
+;Next
+
+; Report map data.
+;MsgBox(1, "Map Data", $text)
+
+
 ; Run the program until it is closed.
 While 1
     $Msg = GUIGetMsg()

@@ -12,6 +12,7 @@ AutoItSetOption ( "WinWaitDelay", 5 ) ; Default 250 ms
 $tilesize = 16
 $GUIWidth = 300
 $GUIHeight = 300
+$MouseMoveSpeed = 0 ; instant
 
 
 

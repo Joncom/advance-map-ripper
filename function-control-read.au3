@@ -3,14 +3,12 @@
 
 
 Func GetMapWidth()
-    $width = ControlGetText ( $MainWindowTitle, "", $MapWidthID )
-    Return $width
+    Return ControlGetText ( $MainWindowTitle, "", $MapWidthID )
 EndFunc
 
 
 Func GetMapHeight()
-    $height = ControlGetText ( $MainWindowTitle, "", $MapHeightID )
-    Return $height
+    Return ControlGetText ( $MainWindowTitle, "", $MapHeightID )
 EndFunc
 
 

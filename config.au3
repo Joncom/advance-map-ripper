@@ -1,42 +1,51 @@
 #include-once
 
 
-
-; AUTOIT
+; GENERAL
 
 ; Mouse movement coordinates are relative to the active window.
 AutoItSetOption ( "MouseCoordMode", 2 ) ;1=absolute, 0=relative, 2=client
+
 ; How long to wait between window-related actions like MouseMove.
 AutoItSetOption ( "WinWaitDelay", 5 ) ; Default 250 ms
 
-
-
-; GENERAL
-
 $tilesize = 16
-
-
-
-; GUI
-
-$GUITitle = "AM Ripper" ; Don't use word "Advance" because confuses title searching.
 $GUIWidth = 300
 $GUIHeight = 300
 
 
 
-; MAIN WINDOW
+; TITLES
 
 $MainWindowTitle = "Advance" ; First part of title.
+$BlockEditorWindowTitle = "Block editor"
+$GUITitle = "AM Ripper" ; Don't use word "Advance" because confuses title searching.
+
+
+
+; CONTROL IDS
+
 $MainTabID = "[CLASSNN:SysTabControl321]"
 $MapWindowID = "[CLASSNN:Window10]"
+$MapNameID = "[CLASSNN:Edit39]"
+$MapWidthID = "[CLASSNN:Edit22]"
+$MapHeightID = "[CLASSNN:Edit21]"
+$MapBankID = "[CLASSNN:Edit19]"
+$MapNoID = "[CLASSNN:Edit17]"
+$BlockEditorBlocksID = "[CLASSNN:Window6]"
+
+
+
+; MAP
 
 ; Make the window small enough to force vertical & horizontal scrollbars.
 $MapWindowWidth = 133
 $MapWindowHeight = 165
+
 ; Precisely how many tiles are viewable in map window?
 $MapWindowTileWidth = 7
 $MapWindowTileHeight = 9
+
 ; Positions of arrows to click on to scroll the map.
 $MapScrollUpX = 123
 $MapScrollUpY = 10
@@ -50,22 +59,12 @@ $MapScrollRightY = 154
 ; Number of pixels a single mousewheel action scrolls the map.
 $MapWindowScrollPx = 8
 
-$MapNameID = "[CLASSNN:Edit39]"
-$MapWidthID = "[CLASSNN:Edit22]"
-$MapHeightID = "[CLASSNN:Edit21]"
-$MapBankID = "[CLASSNN:Edit19]"
-$MapNoID = "[CLASSNN:Edit17]"
 
-; Tab #'s for navigating tabs.
+
+; TABS
+
 $MapTab = 1
-$MovementTab = 2 ; not yet used
-$EventsTab = 3 ; not yet used
-$WildPokemonTab = 4 ; not yet used
+$MovementTab = 2
+$EventsTab = 3
+$WildPokemonTab = 4
 $HeaderTab = 5
-
-
-
-; BLOCK EDITOR WINDOW
-
-$BlockEditorWindowTitle = "Block editor"
-$BlockEditorBlocksID = "[CLASSNN:Window6]"

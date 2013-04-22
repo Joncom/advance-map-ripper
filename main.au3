@@ -6,7 +6,6 @@
 #include <window-resizing.au3>  ; Functions for resizing windows.
 #include <gui.au3>              ; Sets up the graphical user interface.
 
-_GUIScrollBars_ScrollWindow("", $iXAmount, $iYAmount)
 
 ; Used to keep track of where map is currently scrolled to.
 $MapScrollX = 0

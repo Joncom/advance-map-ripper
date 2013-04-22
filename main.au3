@@ -2,6 +2,7 @@
 #include <functions.au3>
 #include <function-tab-select.au3>
 #include <function-control-read.au3>
+#include <window-resizing.au3>
 #include <gui.au3>
 
 ;$text = ControlCommand ( $MainWindowTitle, "", 50017416, "CurrentTab", "" )

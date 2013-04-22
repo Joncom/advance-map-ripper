@@ -28,6 +28,10 @@
 ;$text = "Window size is " & $pos[2] & " by " & $pos[3]
 ;MsgBox(1, "Window Size:", $text)
 
+; Used to keep track of where map is currently scrolled to.
+$MapScrollX = 0
+$MapScrollY = 0
+
 ; Resize map window to specific size so it can be scrolled accurately.
 ResizeMapWindow($MapWindowWidth, $MapWindowHeight)
 

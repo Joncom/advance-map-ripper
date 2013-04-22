@@ -1,5 +1,5 @@
 #include <config.au3>
-#include <functions.au3>
+#include <map-scrolling.au3> ; Functions for scrolling the current map.
 #include <tab-selection.au3> ; Functions for changing which tab is selected.
 #include <data-extraction.au3> ; Getter functions for reading data.
 #include <window-resizing.au3> ; Functions for resizing windows.

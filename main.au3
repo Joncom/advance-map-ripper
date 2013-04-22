@@ -59,6 +59,10 @@ While 1
             MsgBox(1, "Map Width", GetMapWidth())
         Case $ButtonGetMapHeight
             MsgBox(1, "Map Height", GetMapHeight())
+        Case $ButtonGetMapBank
+            MsgBox(1, "Map Bank", GetMapBank())
+        Case $ButtonGetMapNo
+            MsgBox(1, "Map Bank", GetMapNo())
         Case 0
             ContinueLoop
     EndSwitch

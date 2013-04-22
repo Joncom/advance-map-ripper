@@ -19,4 +19,6 @@ $ButtonMoveMouseToMapTile = GUICtrlCreateButton ( "Move Mouse To Map Tile", 55, 
 ; DATA READING
 $ButtonGetMapWidth = GUICtrlCreateButton ( "Get Map Width", 5, 185 )
 $ButtonGetMapHeight = GUICtrlCreateButton ( "Get Map Height", 5, 215 )
+$ButtonGetMapBank = GUICtrlCreateButton ( "Get Map Bank", 5, 245 )
+$ButtonGetMapNo = GUICtrlCreateButton ( "Get Map Number", 5, 275 )
 

@@ -1,5 +1,5 @@
 #include <config.au3>           ; Settings and configuration.
-#include <map-scrolling.au3>    ; Functions for scrolling the current map.
+#include <scrolling.au3>        ; Functions for scrolling.
 #include <mouse-movement.au3>   ; Functions for moving the mouse.
 #include <tab-selection.au3>    ; Functions for changing which tab is selected.
 #include <getters.au3>          ; Getter functions for reading data.

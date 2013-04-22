@@ -47,21 +47,25 @@ EndFunc
 
 
 Func ScrollMapLeft()
+    $MapScrollX = $MapScrollX - 1
     ClickMapWindow($MapScrollLeftX, $MapScrollLeftY)
 EndFunc
 
 
 Func ScrollMapRight()
+    $MapScrollX = $MapScrollX + 1
     ClickMapWindow($MapScrollRightX, $MapScrollRightY)
 EndFunc
 
 
 Func ScrollMapUp()
+    $MapScrollY = $MapScrollY - 1
     ClickMapWindow($MapScrollUpX, $MapScrollUpY)
 EndFunc
 
 
 Func ScrollMapDown()
+    $MapScrollY = $MapScrollY + 1
     ClickMapWindow($MapScrollDownX, $MapScrollDownY)
 EndFunc
 

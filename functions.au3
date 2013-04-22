@@ -20,23 +20,6 @@ Func MoveMouseToMapTile($x, $y)
 EndFunc
 
 
-
-Func GetBlockFromStatusbar()
-    ; Get status text as string.
-    $status = StatusbarGetText($MainWindowTitle)
-    ; Break up string into pieces.
-    $pieces = StringSplit( $status, "$" )
-    ; Count how many pieces in the array.
-    $count = UBound( $pieces )
-    ; The last piece should be the block.
-    $hexBlock = $pieces[$count-1]
-    ; Convert hex value to decimal.
-    $decBlock = Dec( $hexBlock )
-    Return $decBlock
-EndFunc
-
-
-
 Func ResizeMapWindow($width, $height)
     ; Get the current size of the map window.
     $size = ControlGetPos ( $MainWindowTitle, "", $MapWindowID )

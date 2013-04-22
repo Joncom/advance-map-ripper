@@ -56,8 +56,8 @@ $MapScrollLeftY = 155
 $MapScrollRightX = 105
 $MapScrollRightY = 154
 
-; Number of pixels a single mousewheel action scrolls the map.
-$MapWindowScrollPx = 8
+; How many pixels does a single scroll action shift the map?
+$MapScrollPx = 8
 
 
 

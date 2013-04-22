@@ -237,7 +237,7 @@
 					</properties>
 					<components/>
 				</object>
-				<object type="TAInput" name="Input2">
+				<object type="TAInput" name="InputTileY">
 					<properties>
 						<property name="Left" vt="Int16">208</property>
 						<property name="Top" vt="Int8">24</property>

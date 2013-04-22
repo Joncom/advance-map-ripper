@@ -12,3 +12,13 @@ Func GetMapHeight()
     $height = ControlGetText ( $MainWindowTitle, "", $MapHeightID )
     Return $height
 EndFunc
+
+
+Func GetMapBank()
+	Return ControlGetText ( $MainWindowTitle, "", $MapBankID )
+EndFunc
+
+
+Func GetMapNo()
+	Return ControlGetText ( $MainWindowTitle, "", $MapNoID )
+EndFunc

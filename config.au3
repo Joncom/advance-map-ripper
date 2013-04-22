@@ -59,7 +59,7 @@ $MapScrollRightX = 105
 $MapScrollRightY = 154
 
 ; How many clicks to scroll one tile?
-$MapScrollClicksPerTile = 2
+$ScrollClicksPerTile = 2
 
 
 

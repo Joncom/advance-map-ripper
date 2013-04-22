@@ -60,6 +60,6 @@ Func ClickMapWindow($x, $y)
     $newX = $mapWindowPos[0] + $x
     $newY = $mapWindowPos[1] + $y
     ; Click scroll button.
-    MouseClick ( "left", $newX, $newY, $MapScrollClicksPerTile, $MouseMoveSpeed )
+    MouseClick ( "left", $newX, $newY, $ScrollClicksPerTile, $MouseMoveSpeed )
 EndFunc
 

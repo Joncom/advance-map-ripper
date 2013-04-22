@@ -1,3 +1,4 @@
+#include-once
 #include <config.au3>
 #include <ButtonConstants.au3>
 #include <EditConstants.au3>

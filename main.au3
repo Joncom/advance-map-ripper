@@ -1,9 +1,13 @@
 #include <config.au3>           ; Settings and configuration.
 #include <map-scrolling.au3>    ; Functions for scrolling the current map.
+#include <mouse-movement.au3>   ; Functions for moving the mouse.
 #include <tab-selection.au3>    ; Functions for changing which tab is selected.
 #include <data-extraction.au3>  ; Getter functions for reading data.
 #include <window-resizing.au3>  ; Functions for resizing windows.
 #include <gui.au3>              ; Sets up the graphical user interface.
+#include <GuiScrollBars.au3>
+
+_GUIScrollBars_ScrollWindow("", $iXAmount, $iYAmount)
 
 ; Used to keep track of where map is currently scrolled to.
 $MapScrollX = 0

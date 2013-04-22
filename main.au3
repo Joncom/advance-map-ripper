@@ -64,6 +64,14 @@ While 1
             MsgBox(1, "Map Bank", GetMapBank())
         Case $ButtonGetMapNo
             MsgBox(1, "Map Bank", GetMapNo())
+        Case $ButtonScrollMapLeft
+            ScrollMapLeft()
+        Case $ButtonScrollMapRight
+            ScrollMapRight()
+        Case $ButtonScrollMapUp
+            ScrollMapUp()
+        Case $ButtonScrollMapDown
+            ScrollMapDown()
         Case 0
             ContinueLoop
     EndSwitch

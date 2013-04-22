@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="windows-1251"?>
-<object type="TAForm" name="Form1_1">
+<object type="TAForm" name="MainForm">
 	<properties>
 		<property name="Left" vt="Int16">192</property>
 		<property name="Top" vt="Int8">124</property>

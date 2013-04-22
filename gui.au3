@@ -10,7 +10,7 @@
 
 
 #Region ### START Koda GUI section ### Form=D:\wamp\www\advance-map-ripper\gui.kxf
-$Form1_1 = GUICreate("Form1", 377, 368, 192, 124)
+$MainForm = GUICreate("Form1", 377, 368, 192, 124)
 $Group1 = GUICtrlCreateGroup("Tab Selection", 8, 8, 361, 65)
 $ButtonSelectMapTab = GUICtrlCreateButton("Map", 16, 32, 49, 25)
 $ButtonSelectMovementTab = GUICtrlCreateButton("Movement", 72, 32, 65, 25)

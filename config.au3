@@ -41,7 +41,7 @@ $MainMapWindowHeight = 165
 $MainMapWindowTileWidth = 7
 $MainMapWindowTileHeight = 9
 
-; Number of pixels a single mousewheel action scrolls.
+; Number of pixels a single mousewheel action scrolls the map.
 $MainMapWindowScrollPx = 8
 
 $MapNameID = "[CLASSNN:Edit39]"

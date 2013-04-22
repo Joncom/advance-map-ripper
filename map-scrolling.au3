@@ -16,7 +16,7 @@ Func MoveMouseToMapTile($x, $y)
     ; Window must be active for MouseMove relative coord to work.
     WinActivate ( $MainWindowTitle )
     ; Move mouse to tile position.
-    MouseMove($mouseX, $mouseY, 0)
+    MouseMove($mouseX, $mouseY, $MouseMoveSpeed)
 EndFunc
 
 

@@ -19,3 +19,8 @@ Func MoveMouseToMapTile($x, $y)
     MouseMove($mouseX, $mouseY, 0)
 EndFunc
 
+
+Func ScrollMapRight()
+    ControlClick ( $MainWindowTitle, "", $MapWindowID, "left", 2, $MapScrollRightX, $MapScrollRightY )
+EndFunc
+

@@ -13,7 +13,7 @@ $MapScrollX = 0
 $MapScrollY = 0
 
 ; Used to keep track of which block is at which tile.
-Dim $MapBlocks[ GetMapWidth() ][ GetMapHeight() ]
+Dim $TileValues[ GetMapWidth() ][ GetMapHeight() ]
 
 ; Resize map in preperation for reading tiles.
 ;ResizeMapWindow($MapWindowWidth, $MapWindowHeight)
@@ -29,7 +29,7 @@ Dim $MapBlocks[ GetMapWidth() ][ GetMapHeight() ]
 ;        ; Get current block.
 ;        $block = GetBlockFromStatusbar()
 ;        ; Store block.
-;        $MapBlocks[$x][$y] = $block
+;        $TileValues[$x][$y] = $block
 ;        ; Used for reporting.
 ;        $text = $text & $block & " "
 ;    Next

@@ -25,7 +25,7 @@ $GUITitle = "AM Ripper" ; Don't use word "Advance" because confuses title search
 
 ; CONTROL IDS
 
-$MainTabID = "[CLASSNN:SysTabControl321]"
+$TabID = "[CLASSNN:SysTabControl321]"
 $MapWindowID = "[CLASSNN:Window10]"
 $MapNameID = "[CLASSNN:Edit39]"
 $MapWidthID = "[CLASSNN:Edit22]"

@@ -2,23 +2,23 @@
 #include <config.au3>
 
 Func SelectMapTab()
-    SelectTab($MainTabID, $MapTab)
+    SelectTab($TabID, $MapTab)
 EndFunc
 
 Func SelectMovementTab()
-    SelectTab($MainTabID, $MovementTab)
+    SelectTab($TabID, $MovementTab)
 EndFunc
 
 Func SelectEventsTab()
-    SelectTab($MainTabID, $EventsTab)
+    SelectTab($TabID, $EventsTab)
 EndFunc
 
 Func SelectWildPokemonTab()
-    SelectTab($MainTabID, $WildPokemonTab)
+    SelectTab($TabID, $WildPokemonTab)
 EndFunc
 
 Func SelectHeaderTab()
-    SelectTab($MainTabID, $HeaderTab)
+    SelectTab($TabID, $HeaderTab)
 EndFunc
 
 Func SelectTab($controlID, $tab)

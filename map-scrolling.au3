@@ -2,7 +2,7 @@
 #include <config.au3>
 
 Func MoveMouseToMapTile($x, $y)
-    ; Take into where the window is scrolled to.
+    ; Take into where the map is scrolled to.
     $x = $x - $MapScrollX
     $y = $y - $MapScrollY
     ; Convert tile position to pixels.

@@ -21,6 +21,14 @@ EndFunc
 
 
 Func ScrollMapRight()
-    ControlClick ( $MainWindowTitle, "", $MapWindowID, "left", 2, $MapScrollRightX, $MapScrollRightY )
+    ; Get position of map window.
+    $mapWindowPos = ControlGetPos ( $MainWindowTitle, "", $MapWindowID )
+    ; Window must be active for MouseMove relative coord to work.
+    WinActivate( $MainWindowTitle )
+    ; Calculate click position.
+    $x = $mapWindowPos[0] + $MapScrollRightX
+    $y = $mapWindowPos[1] + $MapScrollRightY
+    ; Click scroll button.
+    MouseClick ( "left", $x, $y, $MapScrollClicksPerTile, $MouseMoveSpeed )
 EndFunc
 

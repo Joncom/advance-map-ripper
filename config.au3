@@ -29,8 +29,6 @@ $GUIHeight = 300
 
 $MainWindowTitle = "Advance" ; First part of title.
 $MainTabID = "[CLASSNN:SysTabControl321]"
-$MapBankID = "[CLASSNN:Edit19]"
-$MapNoID = "[CLASSNN:Edit17]"
 $MapWindowID = "[CLASSNN:Window10]"
 
 ; These size values are important because they make the window small enough
@@ -47,6 +45,8 @@ $MapWindowScrollPx = 8
 $MapNameID = "[CLASSNN:Edit39]"
 $MapWidthID = "[CLASSNN:Edit22]"
 $MapHeightID = "[CLASSNN:Edit21]"
+$MapBankID = "[CLASSNN:Edit19]"
+$MapNoID = "[CLASSNN:Edit17]"
 
 ; Tab #'s for navigating tabs.
 $MapTab = 1

@@ -72,7 +72,7 @@ Func ScrollMapDown()
     ClickMapWindow($MapScrollDownX, $MapScrollDownY)
 EndFunc
 
-
+; Used by scroll functions to click on scrollbar arrows.
 Func ClickMapWindow($x, $y)
     ; Get position of map window.
     $mapWindowPos = ControlGetPos ( $MainWindowTitle, "", $MapWindowID )

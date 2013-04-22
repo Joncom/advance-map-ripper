@@ -20,6 +20,32 @@ Func MoveMouseToMapTile($x, $y)
 EndFunc
 
 
+Func ScrollMapUntilTileIsOnScreen($x, $y)
+    ; Is the tile to the left of the viewable area?
+    If $x < $MapScrollX Then
+        ; Scroll left.
+        ScrollMapLeft()
+    ; Is the tile to the right of the viewable area?
+    ElseIf $x > $MapScrollX + $MapWindowTileWidth Then
+        ; Scroll right.
+        ScrollMapRight()
+    ; Is the tile above the viewable area?
+    ElseIf $y < $MapScrollY Then
+        ; Scroll up.
+        ScrollMapUp()
+    ; Is the tile below the viewable area?
+    ElseIf $y > $MapScrollY + $MapWindowTileHeight Then
+        ; Scroll down.
+        ScrollMapDown()
+    Else
+        Return ; The tile is visible
+    EndIf
+    ; If the function has not returned,
+    ; it means there is more work to do.
+    ScrollMapUntilTileIsOnScreen($x, $y)
+EndFunc
+
+
 Func ScrollMapLeft()
     ClickMapWindow($MapScrollLeftX, $MapScrollLeftY)
 EndFunc

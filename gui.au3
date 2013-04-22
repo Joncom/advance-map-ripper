@@ -35,7 +35,7 @@ $ButtonScrollMapRight = GUICtrlCreateButton("Scroll Right", 104, 200, 81, 25)
 $ButtonScrollMapUp = GUICtrlCreateButton("Scroll Up", 192, 200, 81, 25)
 $ButtonScrollMapDown = GUICtrlCreateButton("Scroll Down", 280, 200, 81, 25)
 $ButtonResizeMapWindow = GUICtrlCreateButton("Resize", 312, 168, 49, 25)
-$ButtonScrollToTile = GUICtrlCreateButton("Scroll To Tile", 224, 168, 81, 25)
+$ButtonScrollMapToTile = GUICtrlCreateButton("Scroll To Tile", 224, 168, 81, 25)
 GUICtrlCreateGroup("", -99, -99, 1, 1)
 GUISetState(@SW_SHOW)
 #EndRegion ### END Koda GUI section ###

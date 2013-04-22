@@ -20,15 +20,35 @@ Func MoveMouseToMapTile($x, $y)
 EndFunc
 
 
+Func ScrollMapLeft()
+    ClickMapWindow($MapScrollLeftX, $MapScrollLeftY)
+EndFunc
+
+
 Func ScrollMapRight()
+    ClickMapWindow($MapScrollRightX, $MapScrollRightY)
+EndFunc
+
+
+Func ScrollMapUp()
+    ClickMapWindow($MapScrollUpX, $MapScrollUpY)
+EndFunc
+
+
+Func ScrollMapDown()
+    ClickMapWindow($MapScrollDownX, $MapScrollDownY)
+EndFunc
+
+
+Func ClickMapWindow($x, $y)
     ; Get position of map window.
     $mapWindowPos = ControlGetPos ( $MainWindowTitle, "", $MapWindowID )
     ; Window must be active for MouseMove relative coord to work.
     WinActivate( $MainWindowTitle )
     ; Calculate click position.
-    $x = $mapWindowPos[0] + $MapScrollRightX
-    $y = $mapWindowPos[1] + $MapScrollRightY
+    $newX = $mapWindowPos[0] + $x
+    $newY = $mapWindowPos[1] + $y
     ; Click scroll button.
-    MouseClick ( "left", $x, $y, $MapScrollClicksPerTile, $MouseMoveSpeed )
+    MouseClick ( "left", $newX, $newY, $MapScrollClicksPerTile, $MouseMoveSpeed )
 EndFunc
 

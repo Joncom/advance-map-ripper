@@ -3,7 +3,7 @@
 #include <tab-selection.au3> ; Functions for changing which tab is selected.
 #include <data-extraction.au3> ; Getter functions for reading data.
 #include <window-resizing.au3> ; Functions for resizing windows.
-#include <gui.au3>
+#include <gui.au3> ; Sets up the graphical user interface.
 
 ;$text = ControlCommand ( $MainWindowTitle, "", 50017416, "CurrentTab", "" )
 ;MsgBox ( 1, "Text", GetMapHeight() )

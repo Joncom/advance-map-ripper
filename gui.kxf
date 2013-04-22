@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="windows-1251"?>
 <object type="TAForm" name="MainForm">
 	<properties>
-		<property name="Left" vt="Int16">192</property>
-		<property name="Top" vt="Int8">124</property>
+		<property name="Left" vt="Int16">224</property>
+		<property name="Top" vt="Int16">134</property>
 		<property name="Width" vt="Int16">392</property>
-		<property name="Height" vt="Int16">405</property>
+		<property name="Height" vt="Int16">279</property>
 		<property name="Caption" vt="String">Form1</property>
 		<property name="Color" vt="Ident">clBtnFace</property>
 		<property name="Font.Charset" vt="Ident">DEFAULT_CHARSET</property>

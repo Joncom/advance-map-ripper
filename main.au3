@@ -75,7 +75,7 @@ While 1
         Case $ButtonResizeMapWindow
             ResizeMapWindow($MapWindowWidth, $MapWindowHeight)
         Case $ButtonScrollMapToTile
-            $ButtonScrollMapToTile(Int(GUICtrlRead($InputTileX)), Int(GUICtrlRead($InputTileY)))
+            ScrollMapUntilTileIsOnScreen(Int(GUICtrlRead($InputTileX)), Int(GUICtrlRead($InputTileY)))
         Case 0
             ContinueLoop
     EndSwitch

@@ -3,8 +3,8 @@
 
 Func MoveMouseToMapTile($x, $y)
     ; Convert tile position to pixels.
-    $pixelX = Int($x) * $tilesize
-    $pixelY = Int($y) * $tilesize
+    $pixelX = $x * $tilesize
+    $pixelY = $y * $tilesize
     ; Use the center of tile.
     $pixelX = $pixelX + ($tilesize / 2)
     $pixelY = $pixelY + ($tilesize / 2)

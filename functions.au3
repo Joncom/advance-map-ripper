@@ -80,17 +80,3 @@ Func IncreaseWindowHeight($title, $pixels)
     ; Resize window.
     WinMove( $title, "", $pos[0], $pos[1], $pos[2], $pos[3] + $pixels )
 EndFunc
-
-
-
-Func GetMapWidth()
-    $width = ControlGetText ( $MainWindowTitle, "", $MapWidthID )
-    Return $width
-EndFunc
-
-
-
-Func GetMapHeight()
-    $height = ControlGetText ( $MainWindowTitle, "", $MapHeightID )
-    Return $height
-EndFunc

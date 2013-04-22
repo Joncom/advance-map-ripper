@@ -78,29 +78,19 @@ EndFunc
 
 
 
-Func EnsureMapWindowFitsMap()
-    ; Get map dimensions.
-    $mapWidth = Int(GetMapWidth())
-    $mapHeight = Int(GetMapHeight())
-    ; Convert map dimension to pixels.
-    $pixelWidth = $mapWidth * $tilesize
-    $pixelHeight = $mapHeight * $tilesize
-    ; Add extra space to be safe.
-    $safetyPixels = 30
-    $pixelWidth = $pixelWidth + $safetyPixels
-    $pixelHeight = $pixelHeight + $safetyPixels
-    ; Get size of map window.
+Func ResizeMapWindow($width, $height)
+    ; Get the current size of the map window.
     $size = ControlGetPos ( $MainWindowTitle, "", $MapWindowID )
-    $winWidth = $size[2]
-    $winHeight = $size[3]
-    ; Increase window width if needed.
-    If $winWidth < $pixelWidth Then
-        $diff = $pixelWidth - $winWidth
+    $currWidth = $size[2]
+    $currHeight = $size[3]
+    ; Adjust window width if needed.
+    If $currWidth <> $width Then
+        $diff = $width - $currWidth
         IncreaseWindowWidth( $MainWindowTitle, $diff )
     EndIf
     ; Increase window weight if needed.
-    If $winHeight < $pixelHeight Then
-        $diff = $pixelHeight - $winHeight
+    If $currHeight <> $height Then
+        $diff = $height - $currHeight
         IncreaseWindowHeight( $MainWindowTitle, $diff )
     EndIf
 EndFunc

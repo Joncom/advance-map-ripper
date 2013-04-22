@@ -28,7 +28,8 @@
 ;$text = "Window size is " & $pos[2] & " by " & $pos[3]
 ;MsgBox(1, "Window Size:", $text)
 
-EnsureMapWindowFitsMap()
+; Resize map window to specific size so it can be scrolled accurately.
+ResizeMapWindow($MainMapWindowWidth, $MainMapWindowHeight)
 
 ; Run the program until it is closed.
 While 1

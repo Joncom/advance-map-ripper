@@ -1,24 +1,38 @@
-#include <GUIConstantsEx.au3>
 #include <config.au3>
+#include <ButtonConstants.au3>
+#include <EditConstants.au3>
+#include <GUIConstantsEx.au3>
+#include <StaticConstants.au3>
+#include <WindowsConstants.au3>
 
-GUICreate( $GUITitle, $GUIWidth, $GUIHeight )
+
+
+#Region ### START Koda GUI section ### Form=D:\wamp\www\advance-map-ripper\gui.kxf
+$Form1 = GUICreate("Form1", 377, 241, 192, 124)
+$Group1 = GUICtrlCreateGroup("Tab Selection", 8, 8, 361, 65)
+$ButtonSelectMapTab = GUICtrlCreateButton("Map", 16, 32, 49, 25)
+$ButtonSelectMovementTab = GUICtrlCreateButton("Movement", 72, 32, 65, 25)
+$ButtonSelectEventsTab = GUICtrlCreateButton("Events", 144, 32, 57, 25)
+$ButtonSelectWildPokemonTab = GUICtrlCreateButton("Wild Pokemon", 208, 32, 89, 25)
+$ButtonSelectHeaderTab = GUICtrlCreateButton("Header", 304, 32, 57, 25)
+GUICtrlCreateGroup("", -99, -99, 1, 1)
+$Group2 = GUICtrlCreateGroup("Map Information", 8, 80, 361, 57)
+$ButtonGetMapWidth = GUICtrlCreateButton("Width", 16, 104, 81, 25)
+$ButtonGetMapHeight = GUICtrlCreateButton("Height", 104, 104, 89, 25)
+$ButtonGetMapBank = GUICtrlCreateButton("Bank", 200, 104, 73, 25)
+$ButtonGetMapNo = GUICtrlCreateButton("Number", 280, 104, 81, 25)
+GUICtrlCreateGroup("", -99, -99, 1, 1)
+$Group3 = GUICtrlCreateGroup("Map Window", 8, 144, 361, 89)
+$ButtonMoveMouseToMapTile = GUICtrlCreateButton("Move Mouse To Tile", 16, 168, 121, 25)
+$InputTileX = GUICtrlCreateInput("0", 160, 168, 33, 21)
+$InputTileY = GUICtrlCreateInput("0", 216, 168, 33, 21)
+$Label1 = GUICtrlCreateLabel("X:", 144, 172, 14, 17)
+$Label2 = GUICtrlCreateLabel("Y:", 200, 172, 14, 17)
+$ButtonScrollMapLeft = GUICtrlCreateButton("Scroll Left", 16, 200, 81, 25)
+$ButtonScrollMapRight = GUICtrlCreateButton("Scroll Right", 104, 200, 81, 25)
+$ButtonScrollMapUp = GUICtrlCreateButton("Scroll Up", 192, 200, 81, 25)
+$ButtonScrollMapDown = GUICtrlCreateButton("Scroll Down", 280, 200, 81, 25)
+$ButtonResizeMapWindow = GUICtrlCreateButton("Resize", 256, 168, 105, 25)
+GUICtrlCreateGroup("", -99, -99, 1, 1)
 GUISetState(@SW_SHOW)
-
-; SELECTING TABS
-$ButtonSelectMapTab = GUICtrlCreateButton ( "Select Map Tab", 5, 5 )
-$ButtonSelectMovementTab = GUICtrlCreateButton ( "Select Movement Tab", 5, 35 )
-$ButtonSelectEventsTab = GUICtrlCreateButton ( "Select Events Tab", 5, 65 )
-$ButtonSelectWildPokemonTab = GUICtrlCreateButton ( "Select Wild Pokemon Tab", 5, 95 )
-$ButtonSelectHeaderTab = GUICtrlCreateButton ( "Select Header Tab", 5, 125 )
-
-; MOVING MOUSE TO TILE
-$InputTileX = GUICtrlCreateInput ( "0", 5, 155, 20 )
-$InputTileY = GUICtrlCreateInput ( "0", 30, 155, 20 )
-$ButtonMoveMouseToMapTile = GUICtrlCreateButton ( "Move Mouse To Map Tile", 55, 155 )
-
-; DATA READING
-$ButtonGetMapWidth = GUICtrlCreateButton ( "Get Map Width", 5, 185 )
-$ButtonGetMapHeight = GUICtrlCreateButton ( "Get Map Height", 5, 215 )
-$ButtonGetMapBank = GUICtrlCreateButton ( "Get Map Bank", 5, 245 )
-$ButtonGetMapNo = GUICtrlCreateButton ( "Get Map Number", 5, 275 )
-
+#EndRegion ### END Koda GUI section ###

@@ -4,19 +4,19 @@
 
 Func ScrollMapUntilTileIsOnScreen($x, $y)
     ; Is the tile to the left of the viewable area?
-    If $x < $MapScrollX Then
+    If $x < $ScrollOffsetX Then
         ; Scroll left.
         ScrollMapLeft()
     ; Is the tile to the right of the viewable area?
-    ElseIf $x >= $MapScrollX + $MapWindowTileWidth Then
+    ElseIf $x >= $ScrollOffsetX + $MapWindowTileWidth Then
         ; Scroll right.
         ScrollMapRight()
     ; Is the tile above the viewable area?
-    ElseIf $y < $MapScrollY Then
+    ElseIf $y < $ScrollOffsetY Then
         ; Scroll up.
         ScrollMapUp()
     ; Is the tile below the viewable area?
-    ElseIf $y >= $MapScrollY + $MapWindowTileHeight Then
+    ElseIf $y >= $ScrollOffsetY + $MapWindowTileHeight Then
         ; Scroll down.
         ScrollMapDown()
     Else
@@ -28,25 +28,25 @@ EndFunc
 
 
 Func ScrollMapLeft()
-    $MapScrollX = $MapScrollX - 1
+    $ScrollOffsetX = $ScrollOffsetX - 1
     ClickMapWindow($MapScrollLeftX, $MapScrollLeftY)
 EndFunc
 
 
 Func ScrollMapRight()
-    $MapScrollX = $MapScrollX + 1
+    $ScrollOffsetX = $ScrollOffsetX + 1
     ClickMapWindow($MapScrollRightX, $MapScrollRightY)
 EndFunc
 
 
 Func ScrollMapUp()
-    $MapScrollY = $MapScrollY - 1
+    $ScrollOffsetY = $ScrollOffsetY - 1
     ClickMapWindow($MapScrollUpX, $MapScrollUpY)
 EndFunc
 
 
 Func ScrollMapDown()
-    $MapScrollY = $MapScrollY + 1
+    $ScrollOffsetY = $ScrollOffsetY + 1
     ClickMapWindow($MapScrollDownX, $MapScrollDownY)
 EndFunc
 

@@ -8,8 +8,8 @@
 
 
 ; Used to keep track of where map is currently scrolled to.
-$MapScrollX = 0
-$MapScrollY = 0
+$ScrollOffsetX = 0
+$ScrollOffsetY = 0
 
 ; Used to keep track of which block is at which tile.
 Dim $TileValues[ GetMapWidth() ][ GetMapHeight() ]

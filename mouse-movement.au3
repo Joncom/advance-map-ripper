@@ -3,8 +3,8 @@
 
 Func MoveMouseToMapTile($x, $y)
     ; Take into where the map is scrolled to.
-    $x = $x - $MapScrollX
-    $y = $y - $MapScrollY
+    $x = $x - $ScrollOffsetX
+    $y = $y - $ScrollOffsetY
     ; Convert tile position to pixels.
     $pixelX = $x * $tilesize
     $pixelY = $y * $tilesize

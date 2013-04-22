@@ -33,6 +33,13 @@ $MapWidthID = "[CLASSNN:Edit22]"
 $MapHeightID = "[CLASSNN:Edit21]"
 $MapBankID = "[CLASSNN:Edit19]"
 $MapNoID = "[CLASSNN:Edit17]"
+$MapWeatherID = "[CLASS:Edit; INSTANCE:33]"
+$MapMusicNoID = "[CLASS:Edit; INSTANCE:35]"
+$MapCaveID = "[CLASS:Edit; INSTANCE:34]"
+$MapTypeID = "[CLASS:Edit; INSTANCE:32]"
+$MapFightTypeID = "[CLASS:Edit; INSTANCE:31]"
+$MapShowNameID = "[CLASS:Edit; INSTANCE:38]"
+
 
 
 

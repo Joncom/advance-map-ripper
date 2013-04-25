@@ -36,8 +36,8 @@ EndFunc
 Func GetValueInBrackets($String)
     $FirstBracketPos = StringInStr ( $String, "[" )
     $SecondBracketPos = StringInStr ( $String, "]" )
-    $Count = $SecondBracketPos - $FirstBracketPos
-    $Value = StringMid ( $String, $FirstBracketPos, $Count )
+    $Count = $SecondBracketPos - $FirstBracketPos - 1
+    $Value = StringMid ( $String, $FirstBracketPos + 1, $Count )
     Return $Value
 EndFunc
 

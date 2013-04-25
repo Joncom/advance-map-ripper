@@ -44,6 +44,9 @@ $Value = $text
 
 IniWrite ( $Filename, $Section, $Key, $Value )
 
+; Record map width.
+IniWrite ( $Filename, $Section, "width", GetMapWidth() )
+
 
 ; Run the program until it is closed.
 While 1

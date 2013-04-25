@@ -19,9 +19,11 @@ Func GetBlocks($width, $height)
             ; Move mouse to current tile.
             MoveMouseToMapTile($x, $y)
             ; Get current block.
-            $Block = GetBlockFromStatusbar()
+            $HexBlock = GetNthValueFromStatubar(3)
+            ; Convert block value to decimal.
+            $DecBlock = Dec($HexBlock)
             ; Add block to the others.
-            $Blocks = $Blocks & $Block
+            $Blocks = $Blocks & $DecBlock
             ; Seperate by comma.
             $Blocks = $Blocks & ","
         Next

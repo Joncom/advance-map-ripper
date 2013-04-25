@@ -44,9 +44,6 @@ $Value = $text
 
 IniWrite ( $Filename, $Section, $Key, $Value )
 
-; Report map data.
-;MsgBox(1, "Map Data", $text)
-
 
 ; Run the program until it is closed.
 While 1

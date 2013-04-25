@@ -16,19 +16,26 @@ ResizeMapWindow($MapWindowWidth, $MapWindowHeight)
 
 $Section = "Map." & GetData($MapBankID) & "." & GetData($MapNoID)
 $Filename = $Section & ".map"
+$MapName = GetData($MapNameID)
 $MapWidth = GetData($MapWidthID)
 $MapHeight = GetData($MapHeightID)
 $MapBlocks = GetBlocks($MapWidth, $MapHeight)
-IniWrite ( $Filename, $Section, "name", GetData($MapNameID) )          ; Name
-IniWrite ( $Filename, $Section, "show_name", GetData($MapShowNameID) ) ; Show Name
-IniWrite ( $Filename, $Section, "width", $MapWidth )                   ; Width
-IniWrite ( $Filename, $Section, "height", $MapHeight )                 ; Height
-IniWrite ( $Filename, $Section, "blocks", $MapBlocks )                 ; Blocks
-IniWrite ( $Filename, $Section, "weather", GetData($MapWeatherID) )    ; Weather
-IniWrite ( $Filename, $Section, "music", GetData($MapMusicNoID) )      ; Music
-IniWrite ( $Filename, $Section, "cave", GetData($MapCaveID) )          ; Cave
-IniWrite ( $Filename, $Section, "type", GetData($MapTypeID) )          ; Type
-IniWrite ( $Filename, $Section, "fight", GetData($MapFightTypeID) )    ; Fight Type
+$MapType = GetValueInBrackets(GetData($MapTypeID))
+$MapFightType = GetValueInBrackets(GetData($MapFightTypeID))
+$MapCave = GetValueInBrackets(GetData($MapCaveID))
+$MapMusic = GetData($MapMusicNoID)
+$MapWeather = GetValueInBrackets(GetData($MapWeatherID))
+$MapShowName = GetValueInBrackets(GetData($MapShowNameID))
+IniWrite ( $Filename, $Section, "name", $MapName )          ; Name
+IniWrite ( $Filename, $Section, "show_name", $MapShowName ) ; Show Name
+IniWrite ( $Filename, $Section, "width", $MapWidth )        ; Width
+IniWrite ( $Filename, $Section, "height", $MapHeight )      ; Height
+IniWrite ( $Filename, $Section, "blocks", $MapBlocks )      ; Blocks
+IniWrite ( $Filename, $Section, "weather", $MapWeather )    ; Weather
+IniWrite ( $Filename, $Section, "music", $MapMusic )        ; Music
+IniWrite ( $Filename, $Section, "cave", $MapCave )          ; Cave
+IniWrite ( $Filename, $Section, "type", $MapType )          ; Type
+IniWrite ( $Filename, $Section, "fight", $MapFightType )    ; Fight Type
 
 
 ; Run the program until it is closed.

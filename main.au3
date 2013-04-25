@@ -14,30 +14,21 @@ $ScrollOffsetY = 0
 ; Resize map in preperation for reading tiles.
 ResizeMapWindow($MapWindowWidth, $MapWindowHeight)
 
-$MapName = GetData($MapNameID)
+$Section = "Map." & GetData($MapBankID) & "." & GetData($MapNoID)
+$Filename = $Section & ".map"
 $MapWidth = GetData($MapWidthID)
 $MapHeight = GetData($MapHeightID)
-$MapBank = GetData($MapBankID)
-$MapNo = GetData($MapNoID)
-$MapWeather = GetData($MapWeatherID)
-$MapMusic = GetData($MapMusicNoID)
-$MapCave = GetData($MapCaveID)
-$MapType = GetData($MapTypeID)
-$MapFightType = GetData($MapFightTypeID)
-$MapNameShow = GetData($MapShowNameID)
 $MapBlocks = GetBlocks($MapWidth, $MapHeight)
-$Section = "Map." & $MapBank & "." & $MapNo
-$Filename = $Section & ".map"
-IniWrite ( $Filename, $Section, "name", $MapName )          ; Name
-IniWrite ( $Filename, $Section, "show_name", $MapNameShow ) ; Show Name
-IniWrite ( $Filename, $Section, "width", $MapWidth )        ; Width
-IniWrite ( $Filename, $Section, "height", $MapHeight )      ; Height
-IniWrite ( $Filename, $Section, "blocks", $MapBlocks )      ; Blocks
-IniWrite ( $Filename, $Section, "weather", $MapWeather )    ; Weather
-IniWrite ( $Filename, $Section, "music", $MapMusic )        ; Music
-IniWrite ( $Filename, $Section, "cave", $MapCave )          ; Cave
-IniWrite ( $Filename, $Section, "type", $MapType )          ; Type
-IniWrite ( $Filename, $Section, "fight", $MapFightType )    ; Fight Type
+IniWrite ( $Filename, $Section, "name", GetData($MapNameID) )          ; Name
+IniWrite ( $Filename, $Section, "show_name", GetData($MapShowNameID) ) ; Show Name
+IniWrite ( $Filename, $Section, "width", $MapWidth )                   ; Width
+IniWrite ( $Filename, $Section, "height", $MapHeight )                 ; Height
+IniWrite ( $Filename, $Section, "blocks", $MapBlocks )                 ; Blocks
+IniWrite ( $Filename, $Section, "weather", GetData($MapWeatherID) )    ; Weather
+IniWrite ( $Filename, $Section, "music", GetData($MapMusicNoID) )      ; Music
+IniWrite ( $Filename, $Section, "cave", GetData($MapCaveID) )          ; Cave
+IniWrite ( $Filename, $Section, "type", GetData($MapTypeID) )          ; Type
+IniWrite ( $Filename, $Section, "fight", GetData($MapFightTypeID) )    ; Fight Type
 
 
 ; Run the program until it is closed.

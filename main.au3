@@ -20,8 +20,8 @@ $MapHeight = GetData($MapHeightID)
 $MapBank = GetData($MapBankID)
 $MapNo = GetData($MapNoID)
 $MapBlocks = GetBlocks($MapWidth, $MapHeight)
-$Filename = "Map-" & $MapBank & "-" & $MapNo & ".map"
 $Section = "Map." & $MapBank & "." & $MapNo
+$Filename = $Section & ".map"
 IniWrite ( $Filename, $Section, "name", $MapName )     ; Name
 IniWrite ( $Filename, $Section, "width", $MapWidth )   ; Width
 IniWrite ( $Filename, $Section, "height", $MapHeight ) ; Height

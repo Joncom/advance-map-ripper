@@ -33,6 +33,15 @@ Func GetBlocks($width, $height)
 EndFunc
 
 
+Func GetValueInBrackets($String)
+    $FirstBracketPos = StringInStr ( $String, "[" )
+    $SecondBracketPos = StringInStr ( $String, "]" )
+    $Count = $SecondBracketPos - $FirstBracketPos
+    $Value = StringMid ( $String, $FirstBracketPos, $Count )
+    Return $Value
+EndFunc
+
+
 Func GetBlockFromStatusbar()
     ; Get status text as string.
     $status = StatusbarGetText($MainWindowTitle)

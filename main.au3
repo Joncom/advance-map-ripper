@@ -39,7 +39,7 @@ $Blocks = StringTrimRight ( $Blocks, 1 )
 $Filename = "Map-" & GetMapBank() & "-" & GetMapNo() & ".map"
 $Section = "Map"
 
-
+IniWrite ( $Filename, $Section, "name", GetMapName() ) ; Name
 IniWrite ( $Filename, $Section, "width", GetMapWidth() ) ; Width
 IniWrite ( $Filename, $Section, "height", GetMapHeight() ) ; Height
 IniWrite ( $Filename, $Section, "bank", GetMapBank() ) ; Bank

@@ -19,13 +19,26 @@ $MapWidth = GetData($MapWidthID)
 $MapHeight = GetData($MapHeightID)
 $MapBank = GetData($MapBankID)
 $MapNo = GetData($MapNoID)
+$MapWeather = GetData($MapWeatherID)
+$MapMusic = GetData($MapMusicNoID)
+$MapCave = GetData($MapCaveID)
+$MapType = GetData($MapTypeID)
+$MapFightType = GetData($MapFightTypeID)
+$MapNameShow = GetData($MapShowNameID)
 $MapBlocks = GetBlocks($MapWidth, $MapHeight)
 $Section = "Map." & $MapBank & "." & $MapNo
 $Filename = $Section & ".map"
-IniWrite ( $Filename, $Section, "name", $MapName )     ; Name
-IniWrite ( $Filename, $Section, "width", $MapWidth )   ; Width
-IniWrite ( $Filename, $Section, "height", $MapHeight ) ; Height
-IniWrite ( $Filename, $Section, "blocks", $MapBlocks )    ; Blocks
+IniWrite ( $Filename, $Section, "name", $MapName )          ; Name
+IniWrite ( $Filename, $Section, "show_name", $MapNameShow ) ; Show Name
+IniWrite ( $Filename, $Section, "width", $MapWidth )        ; Width
+IniWrite ( $Filename, $Section, "height", $MapHeight )      ; Height
+IniWrite ( $Filename, $Section, "blocks", $MapBlocks )      ; Blocks
+IniWrite ( $Filename, $Section, "weather", $MapWeather )    ; Weather
+IniWrite ( $Filename, $Section, "music", $MapMusic )        ; Music
+IniWrite ( $Filename, $Section, "cave", $MapCave )          ; Cave
+IniWrite ( $Filename, $Section, "type", $MapType )          ; Type
+IniWrite ( $Filename, $Section, "fight", $MapFightType )    ; Fight Type
+
 
 ; Run the program until it is closed.
 While 1

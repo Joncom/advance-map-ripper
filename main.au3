@@ -32,7 +32,7 @@ For $y = 0 To GetMapHeight() - 1
         ; Used for reporting.
         $text = $text & $block & " "
     Next
-    $text = "\n"
+    $text = $text & "\n"
 Next
 
 ; Report map data.

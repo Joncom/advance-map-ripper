@@ -20,12 +20,12 @@ $MapName = GetData($MapNameID)
 $MapWidth = GetData($MapWidthID)
 $MapHeight = GetData($MapHeightID)
 $MapBlocks = GetBlocks($MapWidth, $MapHeight)
-$MapType = GetValueInBrackets(GetData($MapTypeID))
-$MapFightType = GetValueInBrackets(GetData($MapFightTypeID))
-$MapCave = GetValueInBrackets(GetData($MapCaveID))
-$MapMusic = StringTrimLeft ( GetData($MapMusicNoID), 1 ) ; Trim leading '$'.
-$MapWeather = GetValueInBrackets(GetData($MapWeatherID))
-$MapShowName = GetValueInBrackets(GetData($MapShowNameID))
+$MapType = Dec(GetValueInBrackets(GetData($MapTypeID)))
+$MapFightType = Dec(GetValueInBrackets(GetData($MapFightTypeID)))
+$MapCave = Dec(GetValueInBrackets(GetData($MapCaveID)))
+$MapMusic = Dec(StringTrimLeft(GetData($MapMusicNoID), 1)) ; Trim leading '$'.
+$MapWeather = Dec(GetValueInBrackets(GetData($MapWeatherID)))
+$MapShowName = Dec(GetValueInBrackets(GetData($MapShowNameID)))
 IniWrite ( $Filename, $Section, "name", $MapName )          ; Name
 IniWrite ( $Filename, $Section, "show_name", $MapShowName ) ; Show Name
 IniWrite ( $Filename, $Section, "width", $MapWidth )        ; Width

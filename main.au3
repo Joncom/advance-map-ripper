@@ -11,14 +11,11 @@
 $ScrollOffsetX = 0
 $ScrollOffsetY = 0
 
-; Used to keep track of which block is at which tile.
-Dim $TileValues[ GetMapWidth() ][ GetMapHeight() ]
-
 ; Resize map in preperation for reading tiles.
 ResizeMapWindow($MapWindowWidth, $MapWindowHeight)
 
 ; Get block for each tile in map.
-$text = ""
+$Blocks = ""
 ;For $y = 0 To GetMapHeight() - 1
 For $y = 0 To 3
     ;For $x = 0 To GetMapWidth() - 1
@@ -28,25 +25,27 @@ For $y = 0 To 3
         ; Move mouse to current tile.
         MoveMouseToMapTile($x, $y)
         ; Get current block.
-        $block = GetBlockFromStatusbar()
-        ; Store block.
-        $TileValues[$x][$y] = $block
-        ; Used for reporting.
-        $text = $text & $block & " "
+        $Block = GetBlockFromStatusbar()
+        ; Add block to the others.
+        $Blocks = $Blocks & $Block
+        ; Seperate by comma.
+        $Blocks = $Blocks & ","
     Next
-    $text = $text & "\n"
 Next
 
 $Filename = "Map-" & GetMapBank() & "-" & GetMapNo() & ".map"
-$Section = "Section"
-$Key = "Blocks"
-$Value = $text
+$Section = "Map"
 
-IniWrite ( $Filename, $Section, $Key, $Value )
-
-; Record map width.
+; Width
 IniWrite ( $Filename, $Section, "width", GetMapWidth() )
-
+; Height
+IniWrite ( $Filename, $Section, "height", GetMapHeight() )
+; Bank
+IniWrite ( $Filename, $Section, "bank", GetMapBank() )
+; Number
+IniWrite ( $Filename, $Section, "number", GetMapNo() )
+; Blocks
+IniWrite ( $Filename, $Section, "blocks", $Blocks )
 
 ; Run the program until it is closed.
 While 1

@@ -14,32 +14,12 @@ $ScrollOffsetY = 0
 ; Resize map in preperation for reading tiles.
 ResizeMapWindow($MapWindowWidth, $MapWindowHeight)
 
-; Get block for each tile in map.
-$Blocks = ""
-;For $y = 0 To GetData($MapHeightID) - 1
-For $y = 0 To 3
-    ;For $x = 0 To GetData($MapWidthID) - 1
-    For $x = 0 To 3
-        ; Make sure tile is on screen.
-        ScrollMapUntilTileIsOnScreen($x, $y)
-        ; Move mouse to current tile.
-        MoveMouseToMapTile($x, $y)
-        ; Get current block.
-        $Block = GetBlockFromStatusbar()
-        ; Add block to the others.
-        $Blocks = $Blocks & $Block
-        ; Seperate by comma.
-        $Blocks = $Blocks & ","
-    Next
-Next
-; Remove extra comma.
-$Blocks = StringTrimRight ( $Blocks, 1 )
-
 $MapName = GetData($MapNameID)
 $MapWidth = GetData($MapWidthID)
 $MapHeight = GetData($MapHeightID)
 $MapBank = GetData($MapBankID)
 $MapNo = GetData($MapNoID)
+$MapBlocks = GetBlocks($MapWidth, $MapHeight)
 $Filename = "Map-" & $MapBank & "-" & $MapNo & ".map"
 $Section = "Map"
 IniWrite ( $Filename, $Section, "name", $MapName )     ; Name
@@ -47,7 +27,7 @@ IniWrite ( $Filename, $Section, "width", $MapWidth )   ; Width
 IniWrite ( $Filename, $Section, "height", $MapHeight ) ; Height
 IniWrite ( $Filename, $Section, "bank", $MapBank )     ; Bank
 IniWrite ( $Filename, $Section, "number", $MapNo )     ; Number
-IniWrite ( $Filename, $Section, "blocks", $Blocks )    ; Blocks
+IniWrite ( $Filename, $Section, "blocks", $MapBlocks )    ; Blocks
 
 ; Run the program until it is closed.
 While 1

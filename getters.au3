@@ -7,6 +7,32 @@ Func GetData($ID)
 EndFunc
 
 
+Func GetBlocks($width, $height)
+    ; Get block for each tile in map.
+    $Blocks = ""
+    ;For $y = 0 To GetData($MapHeightID) - 1
+    For $y = 0 To 3
+        ;For $x = 0 To GetData($MapWidthID) - 1
+        For $x = 0 To 3
+            ; Make sure tile is on screen.
+            ScrollMapUntilTileIsOnScreen($x, $y)
+            ; Move mouse to current tile.
+            MoveMouseToMapTile($x, $y)
+            ; Get current block.
+            $Block = GetBlockFromStatusbar()
+            ; Add block to the others.
+            $Blocks = $Blocks & $Block
+            ; Seperate by comma.
+            $Blocks = $Blocks & ","
+        Next
+    Next
+    ; Remove extra comma.
+    $Blocks = StringTrimRight ( $Blocks, 1 )
+    ; Return result.
+    Return $Blocks
+EndFunc
+
+
 Func GetBlockFromStatusbar()
     ; Get status text as string.
     $status = StatusbarGetText($MainWindowTitle)
@@ -21,3 +47,4 @@ Func GetBlockFromStatusbar()
     ; Return result.
     Return $decBlock
 EndFunc
+

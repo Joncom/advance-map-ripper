@@ -53,6 +53,7 @@ Func GetNthValueFromStatubar($n)
     ; Get status text as string.
     $Status = StatusbarGetText($MainWindowTitle)
     ; Find values within the string.
+    ; Example string: "X: $0C Y: $07    Block: $01"
     $Result = StringRegExp( $Status, "[A-Za-z: ]+\$([A-Z0-9]+)(?:[\s]*[A-Za-z: ]+\$([A-Z0-9]+))?(?:[\s]*[A-Za-z: ]+\$([A-Z0-9]+))?", 1 )
     ; Return the desired value.
     Return $Result[$n - 1]

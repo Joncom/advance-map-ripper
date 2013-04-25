@@ -35,15 +35,18 @@ Next
 ; Remove extra comma.
 $Blocks = StringTrimRight ( $Blocks, 1 )
 
-
-$Filename = "Map-" & GetData($MapBankID) & "-" & GetData($MapNoID) & ".map"
+$MapName = GetData($MapNameID)
+$MapWidth = GetData($MapWidthID)
+$MapHeight = GetData($MapHeightID)
+$MapBank = GetData($MapBankID)
+$MapNo = GetData($MapNoID)
+$Filename = "Map-" & $MapBank & "-" & $MapNo & ".map"
 $Section = "Map"
-
-IniWrite ( $Filename, $Section, "name", GetData($MapNameID) ) ; Name
-IniWrite ( $Filename, $Section, "width", GetData($MapWidthID) ) ; Width
-IniWrite ( $Filename, $Section, "height", GetData($MapHeightID) ) ; Height
-IniWrite ( $Filename, $Section, "bank", GetData($MapBankID) ) ; Bank
-IniWrite ( $Filename, $Section, "number", GetData($MapNoID) ) ; Number
+IniWrite ( $Filename, $Section, "name", $MapName ) ; Name
+IniWrite ( $Filename, $Section, "width", $MapWidth ) ; Width
+IniWrite ( $Filename, $Section, "height", $MapHeight ) ; Height
+IniWrite ( $Filename, $Section, "bank", $MapBank ) ; Bank
+IniWrite ( $Filename, $Section, "number", $MapNo ) ; Number
 IniWrite ( $Filename, $Section, "blocks", $Blocks ) ; Blocks
 
 ; Run the program until it is closed.

@@ -59,12 +59,6 @@ Func GetNthValueFromStatubar($n)
         $Result = StringRegExp( $Status, "[A-Za-z: ]+\$([A-Z0-9]+)[\s]*[A-Za-z: ]+\$([A-Z0-9]+)[\s]*[A-Za-z: ]+\$([A-Z0-9]+)", 1 )
     EndIf
     Return $Result[$n - 1]
-    ;X: $05 Y: $00    Block: $1D
-    ;X: $05 Y: $00
-
-    ; [A-Za-z: ]+\$([A-Z0-9]+)[A-Za-z: ]*\$([A-Z0-9]*)[A-Za-z: ]*\$([A-Z0-9]*)
-
-
 EndFunc
 
 

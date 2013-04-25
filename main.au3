@@ -64,14 +64,6 @@ While 1
             SelectHeaderTab()
         Case $ButtonMoveMouseToMapTile
             MoveMouseToMapTile(Int(GUICtrlRead($InputTileX)), Int(GUICtrlRead($InputTileY)))
-        Case $ButtonGetMapWidth
-            MsgBox(1, "Map Width", GetData($MapWidthID))
-        Case $ButtonGetMapHeight
-            MsgBox(1, "Map Height", GetData($MapHeightID))
-        Case $ButtonGetMapBank
-            MsgBox(1, "Map Bank", GetMapBank())
-        Case $ButtonGetMapNo
-            MsgBox(1, "Map Bank", GetMapNo())
         Case $ButtonScrollMapLeft
             ScrollMapLeft()
         Case $ButtonScrollMapRight

@@ -11,7 +11,7 @@
 $ScrollOffsetX = 0
 $ScrollOffsetY = 0
 
-Func RipAndSaveMap
+Func RipAndSaveMap()
     ; Resize map in preperation for reading tiles.
     ResizeMapWindow($MapWindowWidth, $MapWindowHeight)
     ; Extract Map Data

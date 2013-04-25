@@ -39,11 +39,11 @@ $Blocks = StringTrimRight ( $Blocks, 1 )
 $Filename = "Map-" & GetMapBank() & "-" & GetMapNo() & ".map"
 $Section = "Map"
 
-IniWrite ( $Filename, $Section, "name", GetMapName() ) ; Name
-IniWrite ( $Filename, $Section, "width", GetMapWidth() ) ; Width
-IniWrite ( $Filename, $Section, "height", GetMapHeight() ) ; Height
-IniWrite ( $Filename, $Section, "bank", GetMapBank() ) ; Bank
-IniWrite ( $Filename, $Section, "number", GetMapNo() ) ; Number
+IniWrite ( $Filename, $Section, "name", GetData($MapNameID) ) ; Name
+IniWrite ( $Filename, $Section, "width", GetData($MapWidthID) ) ; Width
+IniWrite ( $Filename, $Section, "height", GetData($MapHeightID) ) ; Height
+IniWrite ( $Filename, $Section, "bank", GetData($MapBankID) ) ; Bank
+IniWrite ( $Filename, $Section, "number", GetData($MapNoID) ) ; Number
 IniWrite ( $Filename, $Section, "blocks", $Blocks ) ; Blocks
 
 ; Run the program until it is closed.

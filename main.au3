@@ -42,12 +42,12 @@ $MapBank = GetData($MapBankID)
 $MapNo = GetData($MapNoID)
 $Filename = "Map-" & $MapBank & "-" & $MapNo & ".map"
 $Section = "Map"
-IniWrite ( $Filename, $Section, "name", $MapName ) ; Name
-IniWrite ( $Filename, $Section, "width", $MapWidth ) ; Width
+IniWrite ( $Filename, $Section, "name", $MapName )     ; Name
+IniWrite ( $Filename, $Section, "width", $MapWidth )   ; Width
 IniWrite ( $Filename, $Section, "height", $MapHeight ) ; Height
-IniWrite ( $Filename, $Section, "bank", $MapBank ) ; Bank
-IniWrite ( $Filename, $Section, "number", $MapNo ) ; Number
-IniWrite ( $Filename, $Section, "blocks", $Blocks ) ; Blocks
+IniWrite ( $Filename, $Section, "bank", $MapBank )     ; Bank
+IniWrite ( $Filename, $Section, "number", $MapNo )     ; Number
+IniWrite ( $Filename, $Section, "blocks", $Blocks )    ; Blocks
 
 ; Run the program until it is closed.
 While 1

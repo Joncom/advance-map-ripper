@@ -42,6 +42,15 @@ Func GetValueInBrackets($String)
 EndFunc
 
 
+Func GetNthValueFromStatubar($n)
+    ; Get status text as string.
+    $status = StatusbarGetText($MainWindowTitle)
+    ; Break up string into pieces.
+    $pieces = StringSplit( $status, "$" )
+    Return true
+EndFunc
+
+
 Func GetBlockFromStatusbar()
     ; Get status text as string.
     $status = StatusbarGetText($MainWindowTitle)

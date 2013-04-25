@@ -34,11 +34,16 @@ EndFunc
 
 
 Func GetValueInBrackets($String)
+    ; Find position of opening bracket.
     $FirstBracketPos = StringInStr ( $String, "[" )
+    ; Remove all characters up to and including first bracket.
+    $String = StringTrimLeft( $String, $FirstBracketPos )
+    ; Find position of closing bracket.
     $SecondBracketPos = StringInStr ( $String, "]" )
-    $Count = $SecondBracketPos - $FirstBracketPos - 1
-    $Value = StringMid ( $String, $FirstBracketPos + 1, $Count )
-    Return $Value
+    ; Keep only characters before closing bracket.
+    $String = StringMid ( $String, 1, $SecondBracketPos - 1 )
+    ; Return new string.
+    Return $String
 EndFunc
 
 

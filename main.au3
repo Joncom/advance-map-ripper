@@ -14,10 +14,10 @@ $ScrollOffsetY = 0
 ; Resize map in preperation for reading tiles.
 ResizeMapWindow($MapWindowWidth, $MapWindowHeight)
 
+; Save Map Data
 $Section = "MapData"
 $MapBank = GetData($MapBankID)
 $MapNo = GetData($MapNoID)
-$Filename = $MapBank & "." $MapNo & ".map"
 $MapName = GetData($MapNameID)
 $MapWidth = GetData($MapWidthID)
 $MapHeight = GetData($MapHeightID)
@@ -28,6 +28,7 @@ $MapCave = Dec(GetValueInBrackets(GetData($MapCaveID)))
 $MapMusic = Dec(StringTrimLeft(GetData($MapMusicNoID), 1)) ; Trim leading '$'.
 $MapWeather = Dec(GetValueInBrackets(GetData($MapWeatherID)))
 $MapShowName = Dec(GetValueInBrackets(GetData($MapShowNameID)))
+$Filename = $MapBank & "." $MapNo & ".map"
 IniWrite ( $Filename, $Section, "name", $MapName )          ; Name
 IniWrite ( $Filename, $Section, "bank", $MapBank )          ; Bank
 IniWrite ( $Filename, $Section, "number", $MapNo )          ; Bank

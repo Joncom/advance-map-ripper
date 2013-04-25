@@ -54,7 +54,7 @@ Func GetNthValueFromStatubar($n)
     If $n = 1 Then
         $Result = StringRegExp( $Status, "[A-Za-z]:+ \$([A-Z0-9]+)", 1 )
     ElseIf $n = 2 Then
-
+        $Result = StringRegExp( $Status, "[A-Za-z]:+ \$([A-Z0-9]+)[ ]*[A-Za-z]:+ \$([A-Z0-9]+)", 1 )
     ElseIf $n = 3 Then
 
     EndIf

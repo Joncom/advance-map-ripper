@@ -32,6 +32,9 @@ For $y = 0 To 3
         $Blocks = $Blocks & ","
     Next
 Next
+; Remove extra comma.
+$Blocks = StringTrimRight ( $Blocks, 1 )
+
 
 $Filename = "Map-" & GetMapBank() & "-" & GetMapNo() & ".map"
 $Section = "Map"

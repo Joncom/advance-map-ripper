@@ -57,6 +57,11 @@ Func GetMapFightType()
 EndFunc
 
 
+Func GetData($ID)
+    Return ControlGetText ( $MainWindowTitle, "", $ID )
+EndFunc
+
+
 Func GetBlockFromStatusbar()
     ; Get status text as string.
     $status = StatusbarGetText($MainWindowTitle)

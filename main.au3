@@ -37,7 +37,7 @@ For $y = 0 To 3
     $text = $text & "\n"
 Next
 
-$Filename = "Map-" & GetMapBank() & "-" & GetMapNo() & ".ini"
+$Filename = "Map-" & GetMapBank() & "-" & GetMapNo() & ".map"
 $Section = "Section"
 $Key = "Blocks"
 $Value = $text

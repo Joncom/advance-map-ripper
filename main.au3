@@ -21,12 +21,10 @@ $MapBank = GetData($MapBankID)
 $MapNo = GetData($MapNoID)
 $MapBlocks = GetBlocks($MapWidth, $MapHeight)
 $Filename = "Map-" & $MapBank & "-" & $MapNo & ".map"
-$Section = "Map"
+$Section = "Map." & $MapBank & "." & $MapNo
 IniWrite ( $Filename, $Section, "name", $MapName )     ; Name
 IniWrite ( $Filename, $Section, "width", $MapWidth )   ; Width
 IniWrite ( $Filename, $Section, "height", $MapHeight ) ; Height
-IniWrite ( $Filename, $Section, "bank", $MapBank )     ; Bank
-IniWrite ( $Filename, $Section, "number", $MapNo )     ; Number
 IniWrite ( $Filename, $Section, "blocks", $MapBlocks )    ; Blocks
 
 ; Run the program until it is closed.

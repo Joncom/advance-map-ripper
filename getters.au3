@@ -49,10 +49,22 @@ EndFunc
 
 Func GetNthValueFromStatubar($n)
     ; Get status text as string.
-    $status = StatusbarGetText($MainWindowTitle)
-    ; Break up string into pieces.
-    $pieces = StringSplit( $status, "$" )
-    Return true
+    $Status = StatusbarGetText($MainWindowTitle)
+
+    If $n = 1 Then
+        $Result = StringRegExp( $Status, "[A-Za-z]:+ \$([A-Z0-9]+)", 1 )
+    ElseIf $n = 2 Then
+
+    ElseIf $n = 3 Then
+
+    EndIf
+    Return $Result[$n - 1]
+    ;X: $05 Y: $00    Block: $1D
+    ;X: $05 Y: $00
+
+    ; [A-Za-z: ]+\$([A-Z0-9]+)[A-Za-z: ]*\$([A-Z0-9]*)[A-Za-z: ]*\$([A-Z0-9]*)
+
+
 EndFunc
 
 

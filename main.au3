@@ -23,7 +23,7 @@ $MapBlocks = GetBlocks($MapWidth, $MapHeight)
 $MapType = GetValueInBrackets(GetData($MapTypeID))
 $MapFightType = GetValueInBrackets(GetData($MapFightTypeID))
 $MapCave = GetValueInBrackets(GetData($MapCaveID))
-$MapMusic = GetData($MapMusicNoID)
+$MapMusic = StringTrimLeft ( GetData($MapMusicNoID), 1 ) ; Trim leading '$'.
 $MapWeather = GetValueInBrackets(GetData($MapWeatherID))
 $MapShowName = GetValueInBrackets(GetData($MapShowNameID))
 IniWrite ( $Filename, $Section, "name", $MapName )          ; Name

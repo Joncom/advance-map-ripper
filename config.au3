@@ -10,7 +10,7 @@ AutoItSetOption ( "MouseCoordMode", 2 ) ;1=absolute, 0=relative, 2=client
 AutoItSetOption ( "WinWaitDelay", 0 ) ; Default 250 ms
 
 $tilesize = 16
-$MouseMoveSpeed = 0 ; In miliseconds. 0 = instant
+$MouseMoveSpeed = 5 ; In miliseconds. 0 = instant
 
 
 

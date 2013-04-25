@@ -16,9 +16,9 @@ ResizeMapWindow($MapWindowWidth, $MapWindowHeight)
 
 ; Get block for each tile in map.
 $Blocks = ""
-;For $y = 0 To GetMapHeight() - 1
+;For $y = 0 To GetData($MapHeightID) - 1
 For $y = 0 To 3
-    ;For $x = 0 To GetMapWidth() - 1
+    ;For $x = 0 To GetData($MapWidthID) - 1
     For $x = 0 To 3
         ; Make sure tile is on screen.
         ScrollMapUntilTileIsOnScreen($x, $y)
@@ -36,7 +36,7 @@ Next
 $Blocks = StringTrimRight ( $Blocks, 1 )
 
 
-$Filename = "Map-" & GetMapBank() & "-" & GetMapNo() & ".map"
+$Filename = "Map-" & GetData($MapBankID) & "-" & GetData($MapNoID) & ".map"
 $Section = "Map"
 
 IniWrite ( $Filename, $Section, "name", GetData($MapNameID) ) ; Name
@@ -65,9 +65,9 @@ While 1
         Case $ButtonMoveMouseToMapTile
             MoveMouseToMapTile(Int(GUICtrlRead($InputTileX)), Int(GUICtrlRead($InputTileY)))
         Case $ButtonGetMapWidth
-            MsgBox(1, "Map Width", GetMapWidth())
+            MsgBox(1, "Map Width", GetData($MapWidthID))
         Case $ButtonGetMapHeight
-            MsgBox(1, "Map Height", GetMapHeight())
+            MsgBox(1, "Map Height", GetData($MapHeightID))
         Case $ButtonGetMapBank
             MsgBox(1, "Map Bank", GetMapBank())
         Case $ButtonGetMapNo

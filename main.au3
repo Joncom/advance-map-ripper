@@ -19,8 +19,10 @@ ResizeMapWindow($MapWindowWidth, $MapWindowHeight)
 
 ; Get block for each tile in map.
 $text = ""
-For $y = 0 To GetMapHeight() - 1
-    For $x = 0 To GetMapWidth() - 1
+;For $y = 0 To GetMapHeight() - 1
+For $y = 0 To 3
+    ;For $x = 0 To GetMapWidth() - 1
+    For $x = 0 To 3
         ; Make sure tile is on screen.
         ScrollMapUntilTileIsOnScreen($x, $y)
         ; Move mouse to current tile.
@@ -35,8 +37,15 @@ For $y = 0 To GetMapHeight() - 1
     $text = $text & "\n"
 Next
 
+$Filename = "Map-" & GetMapBank() & "-" & GetMapNo() & ".ini"
+$Section = "Section"
+$Key = "Blocks"
+$Value = $text
+
+IniWrite ( $Filename, $Section, $Key, $Value )
+
 ; Report map data.
-MsgBox(1, "Map Data", $text)
+;MsgBox(1, "Map Data", $text)
 
 
 ; Run the program until it is closed.
